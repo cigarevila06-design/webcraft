@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BLACK BARBER — Мужская парикмахерская</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#101010;color:#fff;font-family:Arial,sans-serif}
+header{padding:25px 8%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #333}
+.logo{font-size:25px;font-weight:900;letter-spacing:3px}
+.logo span{color:#d6ad63}
+nav a{color:#ccc;text-decoration:none;margin-left:25px}
+.hero{min-height:620px;padding:100px 10%;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(90deg,#101010 25%,#101010bb),url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1600') center/cover}
+.hero small{color:#d6ad63;letter-spacing:4px}
+h1{font-size:clamp(50px,8vw,90px);margin:25px 0}
+h1 span{color:#d6ad63}
+.hero p{color:#bbb;font-size:18px;max-width:480px;line-height:1.7}
+.btn{display:inline-block;margin-top:30px;padding:17px 30px;background:#d6ad63;color:#111;text-decoration:none;font-weight:bold;width:fit-content}
+section{padding:85px 10%}
+h2{font-size:40px;margin-bottom:35px}
+h2 span{color:#d6ad63}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:#1c1c1c;padding:30px;border:1px solid #333}
+.card h3{font-size:22px;margin-bottom:15px}
+.card p{color:#aaa;line-height:1.7}
+.price{color:#d6ad63;font-size:25px;margin-top:20px}
+.about{background:#181818}
+footer{text-align:center;padding:35px;color:#777;border-top:1px solid #333}
+@media(max-width:600px){header{padding:20px 5%}nav a{margin-left:10px;font-size:13px}section{padding:65px 7%}.hero{padding:80px 7%}}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">BLACK <span>BARBER</span></div>
+<nav>
+<a href="#services">Услуги</a>
+<a href="#about">О нас</a>
+</nav>
+</header>
+
+<div class="hero">
+<small>МУЖСКАЯ ПАРИКМАХЕРСКАЯ</small>
+<h1>ТВОЙ СТИЛЬ.<br><span>ТВОИ ПРАВИЛА.</span></h1>
+<p>Место, где создают индивидуальный стиль. Профессиональные мастера, атмосфера и внимание к деталям.</p>
+<a class="btn" href="#services">ПОСМОТРЕТЬ УСЛУГИ</a>
+</div>
+
+<section id="services">
+<h2>НАШИ <span>УСЛУГИ</span></h2>
+<div class="cards">
+<div class="card"><h3>Мужская стрижка</h3><p>Подбор формы и создание индивидуального образа.</p><div class="price">1 200 ₽</div></div>
+<div class="card"><h3>Оформление бороды</h3><p>Аккуратная форма и профессиональный уход.</p><div class="price">700 ₽</div></div>
+<div class="card"><h3>Комплекс</h3><p>Стрижка и оформление бороды.</p><div class="price">1 700 ₽</div></div>
+</div>
+</section>
+
+<section class="about" id="about">
+<h2>БОЛЬШЕ, ЧЕМ <span>СТРИЖКА</span></h2>
+<p style="color:#aaa;line-height:1.8;max-width:600px">BLACK BARBER — демонстрационный концепт барбершопа. Мы ценим качество, стиль и индивидуальный подход к каждому клиенту.</p>
+</section>
+
+<footer>BLACK BARBER · ДЕМОПРОЕКТ WEBCRAFT · 2026</footer>
+</body>
+</html>

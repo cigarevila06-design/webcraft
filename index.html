@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WEBCRAFT — создание сайтов</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#101114;color:#f5f5f5;line-height:1.6}
+header{padding:22px 8%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #292929}
+.logo{font-size:27px;font-weight:900;color:#ff8617}
+nav a{color:#ddd;text-decoration:none;margin-left:22px}
+.hero{padding:100px 8%;min-height:480px;display:flex;flex-direction:column;justify-content:center;background:radial-gradient(ellipse at 80% 20%,#39200d,#101114 60%)}
+.hero h1{font-size:clamp(38px,7vw,70px);line-height:1.1;max-width:800px}
+.orange{color:#ff8617}
+.hero p{color:#bbb;font-size:19px;margin:22px 0;max-width:600px}
+.btn{display:inline-block;background:#ff8617;color:#111;padding:14px 24px;border:0;border-radius:9px;font-weight:bold;text-decoration:none;cursor:pointer;margin:5px}
+.btn.secondary{background:#292a30;color:white;border:1px solid #555}
+section{padding:75px 8%}
+h2{font-size:36px;margin-bottom:30px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:#1a1b20;border:1px solid #303036;border-radius:14px;padding:25px}
+.card h3{font-size:21px;margin-bottom:10px}
+.card p{color:#aaa}
+.price{color:#ff8617;font-size:25px;font-weight:bold;margin-top:18px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px}
+.step{padding:20px;border-left:3px solid #ff8617;background:#1a1b20}
+.contact{background:#1a1b20;text-align:center;border-radius:18px}
+.contact p{color:#bbb;margin:12px 0 24px}
+.email{display:block;color:#ff8617;text-decoration:none;margin-top:18px}
+footer{text-align:center;padding:25px;color:#777;border-top:1px solid #292929}
+footer a{color:#ff8617;text-decoration:none}
+#robot{position:fixed;right:22px;bottom:22px;width:65px;height:65px;border:0;border-radius:50%;background:#ff8617;font-size:29px;cursor:pointer;box-shadow:0 5px 25px #0008;z-index:10}
+#chat{display:none;position:fixed;right:20px;bottom:100px;width:min(360px,calc(100% - 40px));background:#1b1c21;border:1px solid #444;border-radius:16px;padding:18px;z-index:10;box-shadow:0 10px 40px #000b}
+.chat-head{display:flex;justify-content:space-between;margin-bottom:15px;font-weight:bold}
+#close{background:none;border:0;color:white;font-size:22px;cursor:pointer}
+#aiMessage{color:#eee;margin:12px 0}
+.answer{display:block;width:100%;padding:12px;margin:8px 0;background:#292a30;border:1px solid #45454c;border-radius:8px;color:white;text-align:left;cursor:pointer}
+.answer:hover{border-color:#ff8617}
+@media(max-width:600px){
+header{padding:18px 5%}
+nav a{margin-left:10px;font-size:13px}
+.hero{padding:75px 6%}
+section{padding:55px 6%}
+h2{font-size:29px}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">WEBCRAFT</div>
+<nav>
+<a href="#services">Услуги</a>
+<a href="#contacts">Контакты</a>
+</nav>
+</header>
+
+<div class="hero">
+<h1>Создаём сайты, которые <span class="orange">привлекают клиентов</span></h1>
+<p>Современные сайты для бизнеса. Продуманный дизайн, удобство и адаптация под телефон.</p>
+<a class="btn" href="#services">Посмотреть услуги</a>
+</div>
+
+<section id="services">
+<h2>Наши <span class="orange">услуги</span></h2>
+<div class="cards">
+<div class="card">
+<h3>Сайт-визитка</h3>
+<p>Краткая информация о компании, услугах и контактах.</p>
+<div class="price">от 1 000 ₽</div>
+</div>
+<div class="card">
+<h3>Лендинг</h3>
+<p>Одностраничный сайт для презентации услуги или товара.</p>
+<div class="price">от 2 000 ₽</div>
+</div>
+<div class="card">
+<h3>Многостраничный сайт</h3>
+<p>Несколько страниц с разделами и подробной информацией.</p>
+<div class="price">от 3 000 ₽</div>
+</div>
+<div class="card">
+<h3>Интернет-магазин</h3>
+<p>Каталог товаров и удобная презентация ассортимента.</p>
+<div class="price">от 4 000 ₽</div>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Как мы <span class="orange">работаем</span></h2>
+<div class="steps">
+<div class="step"><h3>01. Заявка</h3><p>Обсуждаем вашу задачу.</p></div>
+<div class="step"><h3>02. Дизайн</h3><p>Подбираем стиль и структуру.</p></div>
+<div class="step"><h3>03. Разработка</h3><p>Создаём и проверяем сайт.</p></div>
+<div class="step"><h3>04. Запуск</h3><p>Передаём готовый результат.</p></div>
+</div>
+</section>
+
+<section id="contacts">
+<div class="contact card">
+<h2>Есть идея для сайта?</h2>
+<p>Напишите нам — обсудим ваш проект.</p>
+<a class="btn" href="https://vk.ru/ilia_climber" target="_blank" rel="noopener">Написать в VK</a>
+<a class="btn secondary" href="mailto:cigarevila06@gmail.com">Написать на почту</a>
+<a class="email" href="mailto:cigarevila06@gmail.com">cigarevila06@gmail.com</a>
+</div>
+</section>
+
+<footer>
+© 2026 WEBCRAFT — создание сайтов<br>
+<a href="mailto:cigarevila06@gmail.com">cigarevila06@gmail.com</a>
+</footer>
+
+<button id="robot" onclick="openAI()" aria-label="Открыть помощника">🤖</button>
+
+<div id="chat">
+<div class="chat-head">
+<span>WEBCRAFT | Помощник</span>
+<button id="close" onclick="closeAI()">×</button>
+</div>
+<div id="aiMessage">Привет! Помогу подобрать сайт для твоего бизнеса. Начнём?</div>
+<div id="answers">
+<button class="answer" onclick="startAI()">Начать подбор</button>
+</div>
+</div>
+
+<script>
+let step=0;
+let data={business:"",goal:"",size:""};
+
+function openAI(){
+ document.getElementById("chat").style.display="block";
+}
+function closeAI(){
+ document.getElementById("chat").style.display="none";
+}
+function startAI(){
+ step=1;
+ data={business:"",goal:"",size:""};
+ showStep();
+}
+function showStep(){
+ const message=document.getElementById("aiMessage");
+ const answers=document.getElementById("answers");
+
+ if(step===1){
+  message.textContent="Какой у вас бизнес?";
+  answers.innerHTML=
+   '<button class="answer" onclick="choose(1,\'Услуги\')">Услуги</button>'+
+   '<button class="answer" onclick="choose(1,\'Магазин\')">Магазин</button>'+
+   '<button class="answer" onclick="choose(1,\'Другое\')">Другое</button>';
+ }
+ else if(step===2){
+  message.textContent="Какая главная задача сайта?";
+  answers.innerHTML=
+   '<button class="answer" onclick="choose(2,\'Получать заявки\')">Получать заявки</button>'+
+   '<button class="answer" onclick="choose(2,\'Продавать товары\')">Продавать товары</button>'+
+   '<button class="answer" onclick="choose(2,\'Рассказывать о бизнесе\')">Рассказывать о бизнесе</button>';
+ }
+ else if(step===3){
+  message.textContent="Какой сайт вам нужен?";
+  answers.innerHTML=
+   '<button class="answer" onclick="choose(3,\'Одностраничный\')">Одностраничный</button>'+
+   '<button class="answer" onclick="choose(3,\'Многостраничный\')">Многостраничный</button>'+
+   '<button class="answer" onclick="choose(3,\'Пока не знаю\')">Пока не знаю</button>';
+ }
+}
+function choose(number,value){
+ if(number===1)data.business=value;
+ if(number===2)data.goal=value;
+ if(number===3)data.size=value;
+ step++;
+ if(step<=3)showStep();
+ else showResult();
+}
+function showResult(){
+ const message=document.getElementById("aiMessage");
+ const answers=document.getElementById("answers");
+ let result,price;
+
+ if(data.goal==="Продавать товары"||data.business==="Магазин"){
+  result="Вам подойдёт сайт магазина.";
+  price="от 4 000 ₽";
+ }else if(data.size==="Многостраничный"){
+  result="Вам подойдёт многостраничный сайт.";
+  price="от 3 000 ₽";
+ }else if(data.goal==="Получать заявки"||data.size==="Одностраничный"){
+  result="Вам подойдёт лендинг.";
+  price="от 2 000 ₽";
+ }else{
+  result="Вам подойдёт сайт-визитка.";
+  price="от 1 000 ₽";
+ }
+
+ message.innerHTML="<strong>"+result+"</strong><br><br>Стоимость: <strong class='orange'>"+price+"</strong><br>Адаптация под телефон и дизайн под ваш бизнес.";
+ answers.innerHTML=
+  '<button class="answer" onclick="contactVK()">📩 Написать в VK</button>'+
+  '<button class="answer" onclick="contactEmail()">✉️ Написать на почту</button>'+
+  '<button class="answer" onclick="startAI()">Подобрать ещё раз</button>';
+}
+function contactVK(){
+ window.location.href="https://vk.ru/ilia_climber";
+}
+function contactEmail(){
+ window.location.href="mailto:cigarevila06@gmail.com";
+}
+</script>
+</body>
+</html>

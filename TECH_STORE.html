@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TECH STORE — Магазин техники</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#0c0c12;color:white;font-family:Arial,sans-serif}
+header{padding:25px 8%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #292936}
+.logo{font-size:25px;font-weight:900}
+.logo span,h1 span,h2 span{color:#a875ff}
+nav a{color:#aaa;text-decoration:none;margin-left:25px}
+nav a:hover{color:#a875ff}
+.hero{min-height:570px;padding:100px 10%;display:flex;flex-direction:column;justify-content:center;background:radial-gradient(ellipse at 80% 40%,#39205c 0%,#171225 30%,#0c0c12 70%)}
+.tag{color:#a875ff;letter-spacing:4px;font-size:13px}
+h1{font-size:clamp(48px,8vw,85px);line-height:1.05;margin:25px 0}
+.hero p{color:#aaa;font-size:19px;line-height:1.7;max-width:520px}
+.btn{display:inline-block;margin-top:30px;background:#a875ff;color:#100b19;padding:17px 28px;border-radius:7px;text-decoration:none;font-weight:bold;width:fit-content}
+section{padding:85px 10%}
+h2{font-size:40px;margin-bottom:35px}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.product{background:#171720;border:1px solid #30303d;border-radius:13px;padding:25px;transition:.3s}
+.product:hover{transform:translateY(-7px);border-color:#a875ff}
+.product-image{height:150px;border-radius:9px;background:linear-gradient(135deg,#302047,#171720);display:flex;align-items:center;justify-content:center;font-size:65px;margin-bottom:22px}
+.product h3{font-size:21px;margin-bottom:12px}
+.product p{color:#aaa;line-height:1.6}
+.price{font-size:25px;color:#a875ff;margin:20px 0}
+.buy{display:block;text-align:center;background:#a875ff;color:#100b19;text-decoration:none;padding:13px;border-radius:6px;font-weight:bold}
+.about{background:#14141c}
+footer{text-align:center;padding:35px;color:#777;border-top:1px solid #292936}
+@media(max-width:600px){header{padding:20px 5%}nav a{margin-left:10px;font-size:13px}section{padding:65px 7%}.hero{padding:80px 7%}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">TECH <span>STORE</span></div>
+<nav>
+<a href="#catalog">Каталог</a>
+<a href="#about">О магазине</a>
+</nav>
+</header>
+
+<div class="hero">
+<div class="tag">TECHNOLOGY · FUTURE · STYLE</div>
+<h1>ТЕХНОЛОГИИ<br><span>НОВОГО УРОВНЯ.</span></h1>
+<p>Откройте для себя мир современной электроники. Смартфоны, компьютеры и аксессуары в одном месте.</p>
+<a class="btn" href="#catalog">СМОТРЕТЬ КАТАЛОГ →</a>
+</div>
+
+<section id="catalog">
+<h2>ПОПУЛЯРНЫЕ <span>ТОВАРЫ</span></h2>
+<div class="products">
+
+<div class="product">
+<div class="product-image">📱</div>
+<h3>Smartphone X</h3>
+<p>Современный смартфон с ярким экраном и отличной камерой.</p>
+<div class="price">49 990 ₽</div>
+<a class="buy" href="#contact">Подробнее</a>
+</div>
+
+<div class="product">
+<div class="product-image">💻</div>
+<h3>UltraBook Pro</h3>
+<p>Стильный ноутбук для работы, учёбы и творчества.</p>
+<div class="price">89 990 ₽</div>
+<a class="buy" href="#contact">Подробнее</a>
+</div>
+
+<div class="product">
+<div class="product-image">🎧</div>
+<h3>SoundPods</h3>
+<p>Беспроводные наушники с качественным звучанием.</p>
+<div class="price">7 990 ₽</div>
+<a class="buy" href="#contact">Подробнее</a>
+</div>
+
+<div class="product">
+<div class="product-image">⌚</div>
+<h3>Smart Watch</h3>
+<p>Умные часы для повседневной жизни и активности.</p>
+<div class="price">12 990 ₽</div>
+<a class="buy" href="#contact">Подробнее</a>
+</div>
+
+</div>
+</section>
+
+<section class="about" id="about">
+<h2>ТЕХНОЛОГИИ <span>ДЛЯ КАЖДОГО</span></h2>
+<p style="color:#aaa;line-height:1.8;max-width:650px">TECH STORE — демонстрационный концепт интернет-магазина. Здесь показан пример современного каталога электроники с адаптивным дизайном.</p>
+</section>
+
+<section id="contact">
+<h2>ЕСТЬ <span>ВОПРОСЫ?</span></h2>
+<p style="color:#aaa">Это демонстрационный магазин. Кнопки товаров пока не оформляют реальные заказы.</p>
+</section>
+
+<footer>TECH STORE · ДЕМОПРОЕКТ WEBCRAFT · 2026</footer>
+</body>
+</html>

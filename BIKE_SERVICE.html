@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BIKE SERVICE — Веломастерская</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#0b0e0c;color:#fff;font-family:Arial,sans-serif}
+header{padding:25px 8%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #26352b}
+.logo{font-size:24px;font-weight:900}
+.logo span{color:#8cff62}
+nav a{color:#aaa;text-decoration:none;margin-left:25px}
+nav a:hover{color:#8cff62}
+.hero{min-height:620px;padding:100px 10%;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(90deg,#0b0e0c 25%,#0b0e0ccc),url('https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=1600') center/cover}
+.hero small{color:#8cff62;letter-spacing:4px}
+h1{font-size:clamp(48px,8vw,85px);margin:25px 0;line-height:1.05}
+h1 span,h2 span{color:#8cff62}
+.hero p{color:#aaa;font-size:18px;max-width:500px;line-height:1.7}
+.btn{display:inline-block;margin-top:30px;padding:17px 28px;background:#8cff62;color:#101510;text-decoration:none;font-weight:bold;width:fit-content;border-radius:5px}
+section{padding:85px 10%}
+h2{font-size:40px;margin-bottom:35px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:#151c17;padding:30px;border:1px solid #29392e;border-radius:10px;transition:.3s}
+.card:hover{transform:translateY(-7px);border-color:#8cff62}
+.card h3{font-size:22px;margin-bottom:15px}
+.card p{color:#aaa;line-height:1.7}
+.price{color:#8cff62;font-size:25px;margin-top:20px}
+.about{background:#111813}
+footer{text-align:center;padding:35px;color:#777;border-top:1px solid #26352b}
+@media(max-width:600px){header{padding:20px 5%}nav a{margin-left:10px;font-size:13px}section{padding:65px 7%}.hero{padding:80px 7%}}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">BIKE <span>SERVICE</span></div>
+<nav>
+<a href="#services">Услуги</a>
+<a href="#about">О мастерской</a>
+</nav>
+</header>
+
+<div class="hero">
+<small>ПРОФЕССИОНАЛЬНАЯ ВЕЛОМАСТЕРСКАЯ</small>
+<h1>ТВОЙ ВЕЛОСИПЕД.<br><span>НАШЕ ДЕЛО.</span></h1>
+<p>Обслуживание, настройка и ремонт велосипедов. Помогаем вернуть велосипеду отличную работу и комфорт на каждом маршруте.</p>
+<a class="btn" href="#services">НАШИ УСЛУГИ</a>
+</div>
+
+<section id="services">
+<h2>ЧТО МЫ <span>ДЕЛАЕМ?</span></h2>
+<div class="cards">
+<div class="card"><h3>Техническое обслуживание</h3><p>Проверка основных узлов и настройка велосипеда.</p><div class="price">от 1 000 ₽</div></div>
+<div class="card"><h3>Настройка трансмиссии</h3><p>Регулировка переключателей и проверка цепи.</p><div class="price">от 500 ₽</div></div>
+<div class="card"><h3>Обслуживание тормозов</h3><p>Проверка, настройка и обслуживание тормозной системы.</p><div class="price">от 700 ₽</div></div>
+</div>
+</section>
+
+<section class="about" id="about">
+<h2>ЕДЕМ <span>ДАЛЬШЕ</span></h2>
+<p style="color:#aaa;line-height:1.8;max-width:600px">BIKE SERVICE — демонстрационный концепт веломастерской. Здесь показано, как может выглядеть современный сайт сервиса.</p>
+</section>
+
+<footer>BIKE SERVICE · ДЕМОПРОЕКТ WEBCRAFT · 2026</footer>
+</body>
+</html>
