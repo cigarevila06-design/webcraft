@@ -4,209 +4,1117 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WEBCRAFT — создание сайтов</title>
+
+<title>WEBCRAFT — создание современных сайтов</title>
+<meta name="description" content="WEBCRAFT — разработка современных сайтов для бизнеса. Лендинги, сайты-визитки и многостраничные сайты по доступным ценам.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#090a0d">
+<link rel="canonical" href="https://cigarevila06-design.github.io/webcraft/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="WEBCRAFT — сайты, которые работают">
+<meta property="og:description" content="Современный дизайн. Продуманная структура. Разработка сайтов для бизнеса.">
+
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#101114;color:#f5f5f5;line-height:1.6}
-header{padding:22px 8%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #292929}
-.logo{font-size:27px;font-weight:900;color:#ff8617}
-nav a{color:#ddd;text-decoration:none;margin-left:22px}
-.hero{padding:100px 8%;min-height:480px;display:flex;flex-direction:column;justify-content:center;background:radial-gradient(ellipse at 80% 20%,#39200d,#101114 60%)}
-.hero h1{font-size:clamp(38px,7vw,70px);line-height:1.1;max-width:800px}
-.orange{color:#ff8617}
-.hero p{color:#bbb;font-size:19px;margin:22px 0;max-width:600px}
-.btn{display:inline-block;background:#ff8617;color:#111;padding:14px 24px;border:0;border-radius:9px;font-weight:bold;text-decoration:none;cursor:pointer;margin:5px}
-.btn.secondary{background:#292a30;color:white;border:1px solid #555}
-section{padding:75px 8%}
-h2{font-size:36px;margin-bottom:30px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-.card{background:#1a1b20;border:1px solid #303036;border-radius:14px;padding:25px}
-.card h3{font-size:21px;margin-bottom:10px}
-.card p{color:#aaa}
-.price{color:#ff8617;font-size:25px;font-weight:bold;margin-top:18px}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px}
-.step{padding:20px;border-left:3px solid #ff8617;background:#1a1b20}
-.contact{background:#1a1b20;text-align:center;border-radius:18px}
-.contact p{color:#bbb;margin:12px 0 24px}
-.email{display:block;color:#ff8617;text-decoration:none;margin-top:18px}
-footer{text-align:center;padding:25px;color:#777;border-top:1px solid #292929}
-footer a{color:#ff8617;text-decoration:none}
-#robot{position:fixed;right:22px;bottom:22px;width:65px;height:65px;border:0;border-radius:50%;background:#ff8617;font-size:29px;cursor:pointer;box-shadow:0 5px 25px #0008;z-index:10}
-#chat{display:none;position:fixed;right:20px;bottom:100px;width:min(360px,calc(100% - 40px));background:#1b1c21;border:1px solid #444;border-radius:16px;padding:18px;z-index:10;box-shadow:0 10px 40px #000b}
-.chat-head{display:flex;justify-content:space-between;margin-bottom:15px;font-weight:bold}
-#close{background:none;border:0;color:white;font-size:22px;cursor:pointer}
-#aiMessage{color:#eee;margin:12px 0}
-.answer{display:block;width:100%;padding:12px;margin:8px 0;background:#292a30;border:1px solid #45454c;border-radius:8px;color:white;text-align:left;cursor:pointer}
-.answer:hover{border-color:#ff8617}
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root{
+--bg:#090a0d;
+--panel:#111319;
+--panel2:#171a22;
+--orange:#ff8528;
+--orange2:#ffad58;
+--white:#f7f7f8;
+--muted:#9295a0;
+--border:rgba(255,255,255,.09);
+}
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{scroll-behavior:smooth}
+
+body{
+font-family:'Manrope',Arial,sans-serif;
+background:var(--bg);
+color:var(--white);
+line-height:1.65;
+overflow-x:hidden;
+}
+
+a{color:inherit;text-decoration:none}
+
+.container{
+width:min(1160px,88%);
+margin:auto;
+}
+
+header{
+position:sticky;
+top:0;
+z-index:20;
+background:rgba(9,10,13,.84);
+backdrop-filter:blur(18px);
+border-bottom:1px solid var(--border);
+}
+
+.header-inner{
+height:82px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+font-size:25px;
+font-weight:800;
+letter-spacing:-1.5px;
+}
+
+.logo span{color:var(--orange)}
+
+.logo small{
+display:block;
+font-size:9px;
+letter-spacing:3px;
+color:#777b86;
+font-weight:600;
+margin-top:-5px;
+}
+
+nav{
+display:flex;
+align-items:center;
+gap:35px;
+}
+
+nav a{
+font-size:13px;
+color:#b9bbc2;
+transition:.2s;
+}
+
+nav a:hover{color:var(--orange)}
+
+.nav-button{
+padding:11px 19px;
+border:1px solid rgba(255,133,40,.45);
+border-radius:8px;
+color:var(--orange);
+font-size:12px;
+font-weight:700;
+transition:.25s;
+}
+
+.nav-button:hover{
+background:var(--orange);
+color:#111;
+}
+
+.hero{
+position:relative;
+padding:105px 0 115px;
+overflow:hidden;
+}
+
+.hero:before{
+content:"";
+position:absolute;
+width:650px;
+height:650px;
+right:-180px;
+top:-180px;
+background:radial-gradient(circle,rgba(255,120,30,.16),transparent 68%);
+pointer-events:none;
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1.2fr .8fr;
+align-items:center;
+gap:60px;
+position:relative;
+}
+
+.eyebrow{
+display:inline-flex;
+align-items:center;
+gap:10px;
+color:var(--orange2);
+font-size:11px;
+font-weight:800;
+letter-spacing:2px;
+text-transform:uppercase;
+margin-bottom:27px;
+}
+
+.eyebrow:before{
+content:"";
+width:24px;
+height:1px;
+background:var(--orange);
+}
+
+.hero h1{
+font-size:clamp(43px,6vw,76px);
+line-height:1.08;
+letter-spacing:-4px;
+font-weight:800;
+max-width:720px;
+}
+
+.gradient{
+background:linear-gradient(100deg,#ff7d20,#ffc078);
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+}
+
+.hero-description{
+max-width:540px;
+margin:27px 0 34px;
+color:var(--muted);
+font-size:15px;
+line-height:1.9;
+}
+
+.hero-actions{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+padding:15px 23px;
+border-radius:9px;
+font-size:13px;
+font-weight:800;
+transition:.25s;
+border:1px solid transparent;
+cursor:pointer;
+}
+
+.btn-primary{
+background:var(--orange);
+color:#15100c;
+box-shadow:0 8px 30px rgba(255,133,40,.18);
+}
+
+.btn-primary:hover{
+background:#ffab60;
+transform:translateY(-3px);
+}
+
+.btn-outline{
+border-color:var(--border);
+color:#eee;
+background:rgba(255,255,255,.025);
+}
+
+.btn-outline:hover{
+border-color:var(--orange);
+color:var(--orange);
+transform:translateY(-3px);
+}
+
+.hero-note{
+margin-top:27px;
+color:#70737d;
+font-size:11px;
+}
+
+.hero-visual{
+position:relative;
+min-height:390px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.visual-glow{
+position:absolute;
+width:330px;
+height:330px;
+border-radius:50%;
+background:rgba(255,123,35,.12);
+filter:blur(75px);
+}
+
+.visual-card{
+position:relative;
+width:100%;
+max-width:390px;
+padding:25px;
+border:1px solid rgba(255,255,255,.12);
+border-radius:19px;
+background:linear-gradient(145deg,#1c2029,#101218);
+box-shadow:0 30px 90px #0009;
+transform:rotate(2deg);
+}
+
+.visual-top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:28px;
+}
+
+.dots{display:flex;gap:6px}
+.dots i{
+width:7px;
+height:7px;
+border-radius:50%;
+background:#555966;
+}
+
+.visual-label{
+font-size:10px;
+color:#8c909b;
+letter-spacing:2px;
+}
+
+.visual-title{
+font-size:29px;
+font-weight:800;
+line-height:1.2;
+margin-bottom:13px;
+}
+
+.visual-text{
+font-size:11px;
+color:#858995;
+max-width:250px;
+}
+
+.visual-line{
+height:1px;
+background:var(--border);
+margin:25px 0;
+}
+
+.visual-bottom{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.visual-number{
+font-size:11px;
+color:#9295a0;
+}
+
+.visual-number strong{
+display:block;
+font-size:24px;
+color:var(--orange);
+}
+
+.visual-mini{
+background:#242833;
+padding:12px 16px;
+border-radius:9px;
+color:var(--orange);
+font-size:11px;
+font-weight:800;
+}
+
+.stats{
+border-top:1px solid var(--border);
+border-bottom:1px solid var(--border);
+background:rgba(255,255,255,.015);
+}
+
+.stats-inner{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+padding:28px 0;
+gap:20px;
+}
+
+.stat{
+text-align:center;
+border-right:1px solid var(--border);
+}
+
+.stat:last-child{border:0}
+
+.stat strong{
+font-size:19px;
+display:block;
+color:var(--orange);
+}
+
+.stat span{
+font-size:11px;
+color:var(--muted);
+}
+
+section.section{
+padding:105px 0;
+}
+
+.section-heading{
+display:flex;
+justify-content:space-between;
+align-items:end;
+gap:30px;
+margin-bottom:43px;
+}
+
+.section-label{
+color:var(--orange);
+font-size:10px;
+font-weight:800;
+letter-spacing:2px;
+text-transform:uppercase;
+margin-bottom:13px;
+}
+
+.section-heading h2{
+font-size:clamp(30px,4vw,45px);
+line-height:1.2;
+letter-spacing:-1.7px;
+}
+
+.section-heading p{
+max-width:350px;
+color:var(--muted);
+font-size:12px;
+}
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:16px;
+}
+
+.service-card{
+position:relative;
+min-height:245px;
+padding:30px;
+border:1px solid var(--border);
+border-radius:15px;
+background:linear-gradient(145deg,#151820,#101217);
+overflow:hidden;
+transition:.3s;
+}
+
+.service-card:hover{
+transform:translateY(-6px);
+border-color:rgba(255,133,40,.45);
+background:linear-gradient(145deg,#1b1d25,#12141a);
+}
+
+.service-number{
+font-size:11px;
+color:var(--orange);
+font-weight:800;
+letter-spacing:2px;
+}
+
+.service-icon{
+position:absolute;
+right:29px;
+top:24px;
+width:43px;
+height:43px;
+border:1px solid rgba(255,133,40,.25);
+background:rgba(255,133,40,.08);
+border-radius:12px;
+display:grid;
+place-items:center;
+color:var(--orange);
+font-size:20px;
+}
+
+.service-card h3{
+font-size:21px;
+margin-top:32px;
+margin-bottom:9px;
+}
+
+.service-card p{
+font-size:12px;
+color:var(--muted);
+max-width:390px;
+}
+
+.service-bottom{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:24px;
+}
+
+.service-price{
+font-size:20px;
+font-weight:800;
+color:var(--orange);
+}
+
+.service-more{
+font-size:11px;
+color:#999da8;
+}
+
+.service-note{
+margin-top:20px;
+font-size:11px;
+color:#777b86;
+}
+
+.advantages{
+background:linear-gradient(120deg,#12141a,#0d0e12);
+border-top:1px solid var(--border);
+border-bottom:1px solid var(--border);
+}
+
+.advantages-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:17px;
+}
+
+.advantage{
+padding:27px;
+border:1px solid var(--border);
+border-radius:13px;
+background:rgba(255,255,255,.018);
+}
+
+.advantage-icon{
+font-size:24px;
+margin-bottom:19px;
+}
+
+.advantage h3{
+font-size:16px;
+margin-bottom:9px;
+}
+
+.advantage p{
+font-size:12px;
+color:var(--muted);
+}
+
+.process-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+}
+
+.process-item{
+padding:24px 19px;
+border-top:2px solid var(--orange);
+background:var(--panel);
+border-radius:0 0 12px 12px;
+}
+
+.process-item span{
+color:var(--orange);
+font-size:12px;
+font-weight:800;
+}
+
+.process-item h3{
+font-size:16px;
+margin:17px 0 8px;
+}
+
+.process-item p{
+font-size:11px;
+color:var(--muted);
+}
+
+.contact-section{
+padding:0 0 100px;
+}
+
+.contact-box{
+position:relative;
+overflow:hidden;
+padding:65px 45px;
+border:1px solid rgba(255,133,40,.3);
+border-radius:20px;
+background:radial-gradient(ellipse at 85% 50%,rgba(255,133,40,.15),transparent 55%),#14161c;
+text-align:center;
+}
+
+.contact-box h2{
+font-size:clamp(30px,4vw,46px);
+letter-spacing:-1.5px;
+}
+
+.contact-box p{
+color:var(--muted);
+font-size:13px;
+margin:15px auto 27px;
+max-width:450px;
+}
+
+.contact-buttons{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.contact-email{
+display:block;
+color:var(--orange);
+font-size:12px;
+margin-top:22px;
+}
+
+footer{
+border-top:1px solid var(--border);
+padding:27px 0;
+}
+
+.footer-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+}
+
+.footer-copy{
+font-size:11px;
+color:#777b86;
+}
+
+.footer-link{
+font-size:11px;
+color:var(--orange);
+}
+
+#robot{
+position:fixed;
+right:25px;
+bottom:25px;
+width:61px;
+height:61px;
+border:1px solid rgba(255,255,255,.2);
+border-radius:18px;
+background:linear-gradient(145deg,#ff9b42,#f56d15);
+font-size:26px;
+cursor:pointer;
+box-shadow:0 8px 35px rgba(255,115,25,.3);
+z-index:50;
+transition:.25s;
+}
+
+#robot:hover{transform:translateY(-5px) rotate(-5deg)}
+
+#chat{
+display:none;
+position:fixed;
+right:25px;
+bottom:100px;
+width:min(365px,calc(100% - 35px));
+background:#151820;
+border:1px solid #373b46;
+border-radius:17px;
+padding:19px;
+z-index:50;
+box-shadow:0 20px 70px #000b;
+}
+
+.chat-head{
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-size:13px;
+font-weight:800;
+}
+
+#close{
+background:none;
+border:0;
+color:white;
+font-size:24px;
+cursor:pointer;
+}
+
+#aiMessage{
+color:#e8e9ec;
+font-size:13px;
+margin:18px 0;
+}
+
+.answer{
+display:block;
+width:100%;
+padding:12px 14px;
+margin:8px 0;
+background:#20242d;
+border:1px solid #383d49;
+border-radius:9px;
+color:white;
+text-align:left;
+font-size:12px;
+font-family:inherit;
+cursor:pointer;
+transition:.2s;
+}
+
+.answer:hover{
+border-color:var(--orange);
+color:var(--orange);
+}
+
+@media(max-width:850px){
+.hero-grid{grid-template-columns:1fr;gap:40px}
+.hero-visual{min-height:300px}
+.visual-card{max-width:460px}
+.advantages-grid{grid-template-columns:1fr 1fr}
+.process-grid{grid-template-columns:1fr 1fr}
+}
+
 @media(max-width:600px){
-header{padding:18px 5%}
-nav a{margin-left:10px;font-size:13px}
-.hero{padding:75px 6%}
-section{padding:55px 6%}
-h2{font-size:29px}
+.container{width:90%}
+.header-inner{height:70px}
+.logo{font-size:21px}
+nav{gap:13px}
+nav a{font-size:11px}
+.nav-button{padding:9px 11px;font-size:10px}
+.hero{padding:75px 0 70px}
+.hero h1{letter-spacing:-2.5px}
+.hero-description{font-size:13px}
+.hero-visual{min-height:260px}
+.visual-card{padding:21px}
+.stats-inner{gap:5px}
+.stat strong{font-size:16px}
+.stat span{font-size:9px}
+section.section{padding:75px 0}
+.section-heading{display:block}
+.section-heading p{margin-top:15px}
+.services-grid{grid-template-columns:1fr}
+.service-card{min-height:225px;padding:24px}
+.advantages-grid{grid-template-columns:1fr}
+.process-grid{grid-template-columns:1fr 1fr}
+.contact-box{padding:45px 20px}
+.footer-inner{flex-direction:column;text-align:center}
+}
+
+@media(max-width:370px){
+nav{gap:8px}
+nav a{font-size:10px}
+.nav-button{font-size:9px;padding:8px}
+.process-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
+
 <body>
 
 <header>
-<div class="logo">WEBCRAFT</div>
+<div class="container header-inner">
+<a class="logo" href="#home">
+WEB<span>CRAFT</span>
+<small>WEB DEVELOPMENT</small>
+</a>
+
 <nav>
 <a href="#services">Услуги</a>
-<a href="#contacts">Контакты</a>
+<a href="#advantages">Преимущества</a>
+<a href="#process">Этапы</a>
+<a class="nav-button" href="#contacts">Обсудить проект ↗</a>
 </nav>
+</div>
 </header>
 
-<div class="hero">
-<h1>Создаём сайты, которые <span class="orange">привлекают клиентов</span></h1>
-<p>Современные сайты для бизнеса. Продуманный дизайн, удобство и адаптация под телефон.</p>
-<a class="btn" href="#services">Посмотреть услуги</a>
+<main>
+
+<section class="hero" id="home">
+<div class="container hero-grid">
+
+<div>
+<div class="eyebrow">РАЗРАБОТКА САЙТОВ</div>
+
+<h1>
+Ваш бизнес.<br>
+Ваш стиль.<br>
+<span class="gradient">Ваш сайт.</span>
+</h1>
+
+<p class="hero-description">
+Создаём современные сайты, которые помогают представить ваш бизнес в интернете. Продуманный дизайн, удобная структура и адаптация под любые устройства.
+</p>
+
+<div class="hero-actions">
+<a class="btn btn-primary" href="#services">Выбрать услугу ↗</a>
+<a class="btn btn-outline" href="#contacts">Связаться с нами</a>
 </div>
 
-<section id="services">
-<h2>Наши <span class="orange">услуги</span></h2>
-<div class="cards">
-<div class="card">
+<div class="hero-note">ДИЗАЙН · РАЗРАБОТКА · ЗАПУСК</div>
+</div>
+
+<div class="hero-visual">
+<div class="visual-glow"></div>
+
+<div class="visual-card">
+<div class="visual-top">
+<div class="dots"><i></i><i></i><i></i></div>
+<div class="visual-label">WEBCRAFT STUDIO</div>
+</div>
+
+<div class="visual-title">
+Создаём<br>
+<span class="gradient">цифровое</span><br>
+пространство.
+</div>
+
+<div class="visual-text">
+Сайты, которые отражают ваш бизнес и помогают заявить о себе.
+</div>
+
+<div class="visual-line"></div>
+
+<div class="visual-bottom">
+<div class="visual-number">
+<strong>01 / 04</strong>
+НАШ ПОДХОД
+</div>
+<div class="visual-mini">LET'S BUILD ↗</div>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<div class="stats">
+<div class="container stats-inner">
+<div class="stat">
+<strong>01</strong>
+<span>Индивидуальный подход</span>
+</div>
+<div class="stat">
+<strong>24/7</strong>
+<span>Доступность сайта онлайн</span>
+</div>
+<div class="stat">
+<strong>100%</strong>
+<span>Адаптация под телефон</span>
+</div>
+</div>
+</div>
+
+<section class="section" id="services">
+<div class="container">
+
+<div class="section-heading">
+<div>
+<div class="section-label">ЧТО МЫ ПРЕДЛАГАЕМ</div>
+<h2>Услуги <span class="gradient">WEBCRAFT</span></h2>
+</div>
+<p>Подберём формат сайта под вашу задачу, направление бизнеса и бюджет.</p>
+</div>
+
+<div class="services-grid">
+
+<div class="service-card">
+<div class="service-number">01 / START</div>
+<div class="service-icon">◈</div>
 <h3>Сайт-визитка</h3>
-<p>Краткая информация о компании, услугах и контактах.</p>
-<div class="price">от 1 000 ₽</div>
+<p>Компактный сайт с информацией о вас, вашей компании, услугах и контактах.</p>
+<div class="service-bottom">
+<div class="service-price">от 1 000 ₽</div>
+<div class="service-more">Подробнее ↗</div>
 </div>
-<div class="card">
+</div>
+
+<div class="service-card">
+<div class="service-number">02 / BUSINESS</div>
+<div class="service-icon">↗</div>
 <h3>Лендинг</h3>
-<p>Одностраничный сайт для презентации услуги или товара.</p>
-<div class="price">от 2 000 ₽</div>
+<p>Яркая одностраничная презентация продукта, услуги или вашего бизнеса.</p>
+<div class="service-bottom">
+<div class="service-price">от 2 000 ₽</div>
+<div class="service-more">Подробнее ↗</div>
 </div>
-<div class="card">
+</div>
+
+<div class="service-card">
+<div class="service-number">03 / PRO</div>
+<div class="service-icon">▤</div>
 <h3>Многостраничный сайт</h3>
-<p>Несколько страниц с разделами и подробной информацией.</p>
-<div class="price">от 3 000 ₽</div>
+<p>Полноценный сайт с отдельными страницами, разделами и подробной информацией.</p>
+<div class="service-bottom">
+<div class="service-price">от 3 000 ₽</div>
+<div class="service-more">Подробнее ↗</div>
 </div>
-<div class="card">
+</div>
+
+<div class="service-card">
+<div class="service-number">04 / SHOP</div>
+<div class="service-icon">◇</div>
 <h3>Интернет-магазин</h3>
-<p>Каталог товаров и удобная презентация ассортимента.</p>
-<div class="price">от 4 000 ₽</div>
+<p>Каталог товаров и презентация ассортимента. Функциональность и стоимость обсуждаются отдельно.</p>
+<div class="service-bottom">
+<div class="service-price">от 4 000 ₽</div>
+<div class="service-more">Подробнее ↗</div>
+</div>
+</div>
+
+</div>
+
+<div class="service-note">
+* Цены указаны как стартовые. Итоговая стоимость зависит от объёма и сложности проекта.
+</div>
+
+</div>
+</section>
+
+<section class="section advantages" id="advantages">
+<div class="container">
+
+<div class="section-heading">
+<div>
+<div class="section-label">НАШИ ПРИНЦИПЫ</div>
+<h2>Почему <span class="gradient">WEBCRAFT?</span></h2>
+</div>
+<p>Внимание к деталям на каждом этапе создания вашего сайта.</p>
+</div>
+
+<div class="advantages-grid">
+
+<div class="advantage">
+<div class="advantage-icon">✳</div>
+<h3>Современный дизайн</h3>
+<p>Аккуратный внешний вид, приятная цветовая гамма и продуманная композиция.</p>
+</div>
+
+<div class="advantage">
+<div class="advantage-icon">⌘</div>
+<h3>Адаптация под устройства</h3>
+<p>Сайт удобно открывать на смартфонах, планшетах и компьютерах.</p>
+</div>
+
+<div class="advantage">
+<div class="advantage-icon">↗</div>
+<h3>Понятный процесс</h3>
+<p>Обсуждаем задачу, согласовываем структуру и показываем результат.</p>
+</div>
+
 </div>
 </div>
 </section>
 
-<section>
-<h2>Как мы <span class="orange">работаем</span></h2>
-<div class="steps">
-<div class="step"><h3>01. Заявка</h3><p>Обсуждаем вашу задачу.</p></div>
-<div class="step"><h3>02. Дизайн</h3><p>Подбираем стиль и структуру.</p></div>
-<div class="step"><h3>03. Разработка</h3><p>Создаём и проверяем сайт.</p></div>
-<div class="step"><h3>04. Запуск</h3><p>Передаём готовый результат.</p></div>
+<section class="section" id="process">
+<div class="container">
+
+<div class="section-heading">
+<div>
+<div class="section-label">ОТ ИДЕИ ДО ЗАПУСКА</div>
+<h2>Как мы <span class="gradient">работаем</span></h2>
+</div>
+<p>Четыре понятных этапа, чтобы превратить вашу идею в готовый сайт.</p>
+</div>
+
+<div class="process-grid">
+
+<div class="process-item">
+<span>01 —</span>
+<h3>Заявка</h3>
+<p>Узнаём о вашем бизнесе, целях и пожеланиях.</p>
+</div>
+
+<div class="process-item">
+<span>02 —</span>
+<h3>Планирование</h3>
+<p>Подбираем структуру, оформление и функции.</p>
+</div>
+
+<div class="process-item">
+<span>03 —</span>
+<h3>Разработка</h3>
+<p>Создаём сайт и проверяем его работу.</p>
+</div>
+
+<div class="process-item">
+<span>04 —</span>
+<h3>Запуск</h3>
+<p>Публикуем готовый проект и передаём результат.</p>
+</div>
+
+</div>
 </div>
 </section>
 
-<section id="contacts">
-<div class="contact card">
-<h2>Есть идея для сайта?</h2>
-<p>Напишите нам — обсудим ваш проект.</p>
-<a class="btn" href="https://vk.ru/ilia_climber" target="_blank" rel="noopener">Написать в VK</a>
-<a class="btn secondary" href="mailto:cigarevila06@gmail.com">Написать на почту</a>
-<a class="email" href="mailto:cigarevila06@gmail.com">cigarevila06@gmail.com</a>
+<section class="contact-section" id="contacts">
+<div class="container">
+<div class="contact-box">
+
+<div class="section-label">ВАШ ПРОЕКТ НАЧИНАЕТСЯ ЗДЕСЬ</div>
+
+<h2>Готовы создать <span class="gradient">свой сайт?</span></h2>
+
+<p>
+Расскажите о своей идее. Обсудим задачу и подберём подходящий вариант сайта.
+</p>
+
+<div class="contact-buttons">
+<a class="btn btn-primary" href="https://vk.ru/ilia_climber" target="_blank" rel="noopener noreferrer">Написать в VK ↗</a>
+<a class="btn btn-outline" href="mailto:cigarevila06@gmail.com">Написать на почту</a>
+</div>
+
+<a class="contact-email" href="mailto:cigarevila06@gmail.com">cigarevila06@gmail.com</a>
+
+</div>
 </div>
 </section>
+
+</main>
 
 <footer>
-© 2026 WEBCRAFT — создание сайтов<br>
-<a href="mailto:cigarevila06@gmail.com">cigarevila06@gmail.com</a>
+<div class="container footer-inner">
+<div class="logo">WEB<span>CRAFT</span></div>
+<div class="footer-copy">© 2026 WEBCRAFT. Все права защищены.</div>
+<a class="footer-link" href="https://vk.ru/ilia_climber" target="_blank" rel="noopener noreferrer">ВКонтакте ↗</a>
+</div>
 </footer>
 
-<button id="robot" onclick="openAI()" aria-label="Открыть помощника">🤖</button>
+<button id="robot" onclick="openAI()" aria-label="Открыть помощника">✳</button>
 
-<div id="chat">
+<div id="chat" role="dialog" aria-label="Помощник WEBCRAFT">
+
 <div class="chat-head">
-<span>WEBCRAFT | Помощник</span>
-<button id="close" onclick="closeAI()">×</button>
+<span>WEBCRAFT / ПОМОЩНИК</span>
+<button id="close" onclick="closeAI()" aria-label="Закрыть">×</button>
 </div>
-<div id="aiMessage">Привет! Помогу подобрать сайт для твоего бизнеса. Начнём?</div>
+
+<div id="aiMessage">
+Привет! Помогу подобрать подходящий сайт для вашего бизнеса. Начнём?
+</div>
+
 <div id="answers">
-<button class="answer" onclick="startAI()">Начать подбор</button>
+<button class="answer" onclick="startAI()">Начать подбор ↗</button>
 </div>
+
 </div>
 
 <script>
 let step=0;
-let data={business:"",goal:"",size:""};
+
+let data={
+business:"",
+goal:"",
+size:""
+};
 
 function openAI(){
- document.getElementById("chat").style.display="block";
+document.getElementById("chat").style.display="block";
 }
+
 function closeAI(){
- document.getElementById("chat").style.display="none";
+document.getElementById("chat").style.display="none";
 }
+
 function startAI(){
- step=1;
- data={business:"",goal:"",size:""};
- showStep();
+step=1;
+data={business:"",goal:"",size:""};
+showStep();
 }
+
 function showStep(){
- const message=document.getElementById("aiMessage");
- const answers=document.getElementById("answers");
 
- if(step===1){
-  message.textContent="Какой у вас бизнес?";
-  answers.innerHTML=
-   '<button class="answer" onclick="choose(1,\'Услуги\')">Услуги</button>'+
-   '<button class="answer" onclick="choose(1,\'Магазин\')">Магазин</button>'+
-   '<button class="answer" onclick="choose(1,\'Другое\')">Другое</button>';
- }
- else if(step===2){
-  message.textContent="Какая главная задача сайта?";
-  answers.innerHTML=
-   '<button class="answer" onclick="choose(2,\'Получать заявки\')">Получать заявки</button>'+
-   '<button class="answer" onclick="choose(2,\'Продавать товары\')">Продавать товары</button>'+
-   '<button class="answer" onclick="choose(2,\'Рассказывать о бизнесе\')">Рассказывать о бизнесе</button>';
- }
- else if(step===3){
-  message.textContent="Какой сайт вам нужен?";
-  answers.innerHTML=
-   '<button class="answer" onclick="choose(3,\'Одностраничный\')">Одностраничный</button>'+
-   '<button class="answer" onclick="choose(3,\'Многостраничный\')">Многостраничный</button>'+
-   '<button class="answer" onclick="choose(3,\'Пока не знаю\')">Пока не знаю</button>';
- }
+const message=document.getElementById("aiMessage");
+const answers=document.getElementById("answers");
+
+if(step===1){
+message.textContent="Какой у вас бизнес?";
+answers.innerHTML=
+'<button class="answer" onclick="choose(1,\'Услуги\')">Услуги</button>'+
+'<button class="answer" onclick="choose(1,\'Магазин\')">Магазин</button>'+
+'<button class="answer" onclick="choose(1,\'Другое\')">Другое</button>';
 }
+
+else if(step===2){
+message.textContent="Какая главная задача сайта?";
+answers.innerHTML=
+'<button class="answer" onclick="choose(2,\'Получать заявки\')">Получать заявки</button>'+
+'<button class="answer" onclick="choose(2,\'Продавать товары\')">Продавать товары</button>'+
+'<button class="answer" onclick="choose(2,\'Рассказывать о бизнесе\')">Рассказывать о бизнесе</button>';
+}
+
+else if(step===3){
+message.textContent="Какой сайт вам нужен?";
+answers.innerHTML=
+'<button class="answer" onclick="choose(3,\'Одностраничный\')">Одностраничный</button>'+
+'<button class="answer" onclick="choose(3,\'Многостраничный\')">Многостраничный</button>'+
+'<button class="answer" onclick="choose(3,\'Пока не знаю\')">Пока не знаю</button>';
+}
+}
+
 function choose(number,value){
- if(number===1)data.business=value;
- if(number===2)data.goal=value;
- if(number===3)data.size=value;
- step++;
- if(step<=3)showStep();
- else showResult();
+
+if(number===1)data.business=value;
+if(number===2)data.goal=value;
+if(number===3)data.size=value;
+
+step++;
+
+if(step<=3){
+showStep();
+}else{
+showResult();
 }
+}
+
 function showResult(){
- const message=document.getElementById("aiMessage");
- const answers=document.getElementById("answers");
- let result,price;
 
- if(data.goal==="Продавать товары"||data.business==="Магазин"){
-  result="Вам подойдёт сайт магазина.";
-  price="от 4 000 ₽";
- }else if(data.size==="Многостраничный"){
-  result="Вам подойдёт многостраничный сайт.";
-  price="от 3 000 ₽";
- }else if(data.goal==="Получать заявки"||data.size==="Одностраничный"){
-  result="Вам подойдёт лендинг.";
-  price="от 2 000 ₽";
- }else{
-  result="Вам подойдёт сайт-визитка.";
-  price="от 1 000 ₽";
- }
+const message=document.getElementById("aiMessage");
+const answers=document.getElementById("answers");
 
- message.innerHTML="<strong>"+result+"</strong><br><br>Стоимость: <strong class='orange'>"+price+"</strong><br>Адаптация под телефон и дизайн под ваш бизнес.";
- answers.innerHTML=
-  '<button class="answer" onclick="contactVK()">📩 Написать в VK</button>'+
-  '<button class="answer" onclick="contactEmail()">✉️ Написать на почту</button>'+
-  '<button class="answer" onclick="startAI()">Подобрать ещё раз</button>';
+let result;
+let price;
+
+if(data.goal==="Продавать товары"||data.business==="Магазин"){
+result="Вам подойдёт сайт магазина.";
+price="от 4 000 ₽";
 }
+else if(data.size==="Многостраничный"){
+result="Вам подойдёт многостраничный сайт.";
+price="от 3 000 ₽";
+}
+else if(data.goal==="Получать заявки"||data.size==="Одностраничный"){
+result="Вам подойдёт лендинг.";
+price="от 2 000 ₽";
+}
+else{
+result="Вам подойдёт сайт-визитка.";
+price="от 1 000 ₽";
+}
+
+message.innerHTML=
+"<strong>"+result+"</strong><br><br>"+
+"Стоимость: <strong style='color:#ff8528'>"+price+"</strong><br>"+
+"Адаптация под телефон и оформление под ваш бизнес.";
+
+answers.innerHTML=
+'<button class="answer" onclick="contactVK()">Написать в VK ↗</button>'+
+'<button class="answer" onclick="contactEmail()">Написать на почту</button>'+
+'<button class="answer" onclick="startAI()">Подобрать ещё раз</button>';
+}
+
 function contactVK(){
- window.location.href="https://vk.ru/ilia_climber";
+window.location.href="https://vk.ru/ilia_climber";
 }
+
 function contactEmail(){
- window.location.href="mailto:cigarevila06@gmail.com";
+window.location.href="mailto:cigarevila06@gmail.com";
 }
 </script>
+
 </body>
 </html>
