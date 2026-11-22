@@ -4,31 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>WEBCRAFT — создание сайтов под ключ</title>
-<meta name="description" content="WEBCRAFT — создание современных сайтов для бизнеса. Сайт-визитка, лендинг, многостраничный сайт и интернет-магазин.">
+<title>WEBCRAFT — создание сайтов для бизнеса</title>
+<meta name="description" content="WEBCRAFT — создание современных сайтов для бизнеса. Сайт-визитка от 1000 ₽, лендинг от 2000 ₽, многостраничный сайт от 3000 ₽.">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#090a0d">
 <link rel="canonical" href="https://cigarevila06-design.github.io/webcraft/">
 
 <meta property="og:title" content="WEBCRAFT — создание сайтов">
-<meta property="og:description" content="Современные сайты для бизнеса от 1 000 ₽">
+<meta property="og:description" content="Современные сайты для бизнеса от 1000 ₽">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://cigarevila06-design.github.io/webcraft/">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
-
-:root{
-    --bg:#090a0d;
-    --panel:#111319;
-    --panel2:#171a22;
-    --orange:#ff8528;
-    --orange2:#ffad58;
-    --white:#f7f7f8;
-    --muted:#9295a0;
-    --border:rgba(255,255,255,.09);
-}
-
 *{
     box-sizing:border-box;
     margin:0;
@@ -40,13 +31,11 @@ html{
 }
 
 body{
-    font-family:'Manrope',Arial,sans-serif;
-    background:
-        radial-gradient(circle at 80% 10%,rgba(255,133,40,.10),transparent 28%),
-        radial-gradient(circle at 10% 40%,rgba(255,133,40,.05),transparent 25%),
-        var(--bg);
-    color:var(--white);
-    line-height:1.6;
+    font-family:"Manrope",Arial,sans-serif;
+    background:#090a0d;
+    color:#f7f7f8;
+    line-height:1.5;
+    overflow-x:hidden;
 }
 
 a{
@@ -54,8 +43,12 @@ a{
     text-decoration:none;
 }
 
+button{
+    font:inherit;
+}
+
 .container{
-    width:min(1180px,calc(100% - 40px));
+    width:min(1160px,calc(100% - 40px));
     margin:auto;
 }
 
@@ -65,83 +58,81 @@ header{
     position:sticky;
     top:0;
     z-index:100;
-    background:rgba(9,10,13,.78);
     backdrop-filter:blur(18px);
-    border-bottom:1px solid var(--border);
+    background:rgba(9,10,13,.78);
+    border-bottom:1px solid rgba(255,255,255,.07);
 }
 
 .nav{
-    min-height:76px;
+    height:76px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:25px;
+    gap:30px;
 }
 
 .logo{
-    font-size:23px;
+    font-size:22px;
     font-weight:800;
     letter-spacing:-1px;
 }
 
 .logo span{
-    color:var(--orange);
+    color:#ff8528;
 }
 
 .nav-links{
     display:flex;
+    align-items:center;
     gap:28px;
-    color:#b9bbc3;
-    font-size:14px;
-    font-weight:600;
 }
 
 .nav-links a{
-    transition:.2s;
+    color:#aeb0b9;
+    font-size:14px;
+    transition:.25s;
 }
 
 .nav-links a:hover{
-    color:var(--white);
+    color:#fff;
 }
 
-.nav-btn{
+.nav-button{
+    background:#ff8528;
+    color:#111;
     padding:11px 18px;
     border-radius:12px;
-    background:var(--orange);
-    color:#111;
     font-weight:800;
     font-size:14px;
-    transition:.2s;
+    transition:.25s;
 }
 
-.nav-btn:hover{
+.nav-button:hover{
     transform:translateY(-2px);
-    box-shadow:0 10px 30px rgba(255,133,40,.2);
+    background:#ff9d4c;
 }
 
 /* HERO */
 
 .hero{
-    padding:95px 0 70px;
-}
-
-.hero-grid{
+    min-height:680px;
     display:grid;
-    grid-template-columns:1.05fr .95fr;
+    grid-template-columns:1fr 1fr;
     align-items:center;
     gap:70px;
+    padding:90px 0 80px;
 }
 
 .badge{
     display:inline-flex;
     align-items:center;
     gap:8px;
-    padding:8px 13px;
+    padding:8px 12px;
     border:1px solid rgba(255,133,40,.25);
-    background:rgba(255,133,40,.07);
-    color:var(--orange2);
+    background:rgba(255,133,40,.08);
+    color:#ffad58;
     border-radius:999px;
-    font-size:13px;
+    font-size:12px;
     font-weight:700;
     margin-bottom:22px;
 }
@@ -150,196 +141,169 @@ header{
     width:7px;
     height:7px;
     border-radius:50%;
-    background:var(--orange);
-    box-shadow:0 0 12px var(--orange);
+    background:#ff8528;
+    box-shadow:0 0 12px #ff8528;
 }
 
-h1{
-    font-size:clamp(45px,6vw,78px);
+.hero h1{
+    font-size:clamp(42px,6vw,72px);
     line-height:1.02;
-    letter-spacing:-4px;
-    max-width:760px;
+    letter-spacing:-3.5px;
+    max-width:680px;
 }
 
-h1 span{
-    color:var(--orange);
+.hero h1 span{
+    color:#ff8528;
 }
 
 .hero-text{
-    margin-top:25px;
-    max-width:600px;
-    color:var(--muted);
-    font-size:18px;
+    color:#9b9da7;
+    font-size:17px;
+    max-width:570px;
+    margin:25px 0 32px;
 }
 
-.hero-actions{
+.hero-buttons{
     display:flex;
+    gap:12px;
     flex-wrap:wrap;
-    gap:13px;
-    margin-top:32px;
 }
 
 .btn{
     display:inline-flex;
-    align-items:center;
     justify-content:center;
-    min-height:50px;
-    padding:0 22px;
+    align-items:center;
+    padding:14px 22px;
     border-radius:13px;
+    font-size:14px;
     font-weight:800;
-    transition:.2s;
+    transition:.25s;
 }
 
 .btn-primary{
-    background:var(--orange);
-    color:#111;
+    background:#ff8528;
+    color:#101010;
 }
 
 .btn-primary:hover{
-    transform:translateY(-2px);
-    box-shadow:0 15px 35px rgba(255,133,40,.22);
+    transform:translateY(-3px);
+    box-shadow:0 12px 30px rgba(255,133,40,.2);
 }
 
 .btn-secondary{
-    border:1px solid var(--border);
-    background:rgba(255,255,255,.035);
-    color:var(--white);
+    border:1px solid rgba(255,255,255,.12);
+    background:#111319;
+    color:#fff;
 }
 
 .btn-secondary:hover{
-    background:rgba(255,255,255,.07);
+    border-color:rgba(255,133,40,.4);
+    transform:translateY(-3px);
 }
 
-/* HERO MOCKUP */
-
-.hero-visual{
-    position:relative;
-}
+/* BROWSER MOCKUP */
 
 .browser{
-    background:#0e1015;
-    border:1px solid var(--border);
-    border-radius:22px;
+    position:relative;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:20px;
+    background:#111319;
     overflow:hidden;
     box-shadow:0 30px 80px rgba(0,0,0,.45);
     transform:rotate(1deg);
 }
 
 .browser-top{
-    height:43px;
+    height:44px;
     display:flex;
     align-items:center;
     gap:7px;
-    padding:0 15px;
-    border-bottom:1px solid var(--border);
+    padding:0 16px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    background:#15171d;
 }
 
 .browser-dot{
-    width:8px;
-    height:8px;
+    width:9px;
+    height:9px;
     border-radius:50%;
-    background:#555;
+    background:#373a43;
+}
+
+.browser-url{
+    margin-left:8px;
+    flex:1;
+    height:23px;
+    border-radius:7px;
+    background:#0c0d10;
+    color:#626570;
+    font-size:9px;
+    display:flex;
+    align-items:center;
+    padding:0 10px;
 }
 
 .browser-content{
-    padding:24px;
-    min-height:390px;
+    min-height:365px;
+    padding:28px;
     background:
-        linear-gradient(135deg,rgba(255,133,40,.12),transparent 45%),
-        #111319;
-}
-
-.mock-nav{
-    height:18px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+        radial-gradient(circle at 80% 20%,rgba(255,133,40,.18),transparent 35%),
+        linear-gradient(145deg,#101016,#21152d);
 }
 
 .mock-logo{
-    width:70px;
-    height:9px;
-    background:var(--orange);
-    border-radius:5px;
-}
-
-.mock-links{
-    display:flex;
-    gap:8px;
-}
-
-.mock-links i{
-    width:30px;
-    height:6px;
-    border-radius:4px;
-    background:#343741;
-}
-
-.mock-main{
-    margin-top:60px;
-    display:grid;
-    grid-template-columns:1fr .75fr;
-    gap:20px;
-    align-items:center;
+    font-size:15px;
+    font-weight:800;
 }
 
 .mock-title{
-    width:90%;
-    height:20px;
-    border-radius:8px;
-    background:#f2f2f2;
-    box-shadow:0 27px 0 #f2f2f2;
+    font-size:35px;
+    font-weight:800;
+    line-height:1.05;
+    margin-top:55px;
+    max-width:330px;
 }
 
-.mock-small{
-    width:80%;
+.mock-title span{
+    color:#ff8528;
+}
+
+.mock-line{
+    width:210px;
     height:8px;
-    border-radius:5px;
-    background:#474a54;
-    margin-top:48px;
-}
-
-.mock-card{
-    height:180px;
-    border-radius:18px;
-    background:
-        linear-gradient(145deg,#ff8528,#7c3109);
-    position:relative;
-    overflow:hidden;
-}
-
-.mock-card:after{
-    content:"";
-    position:absolute;
-    width:160px;
-    height:160px;
-    border-radius:50%;
-    background:rgba(255,255,255,.16);
-    right:-50px;
-    bottom:-50px;
+    background:rgba(255,255,255,.1);
+    border-radius:10px;
+    margin-top:20px;
 }
 
 .mock-button{
-    margin-top:25px;
-    width:105px;
-    height:28px;
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 18px;
+    background:#ff8528;
+    color:#111;
     border-radius:8px;
-    background:var(--orange);
+    font-size:9px;
+    font-weight:800;
 }
 
 /* STATS */
 
 .stats{
+    border-top:1px solid rgba(255,255,255,.07);
+    border-bottom:1px solid rgba(255,255,255,.07);
+    background:#0d0f13;
+}
+
+.stats-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    border-top:1px solid var(--border);
-    border-bottom:1px solid var(--border);
+    grid-template-columns:repeat(4,1fr);
 }
 
 .stat{
-    padding:25px;
+    padding:30px 20px;
     text-align:center;
-    border-right:1px solid var(--border);
+    border-right:1px solid rgba(255,255,255,.07);
 }
 
 .stat:last-child{
@@ -349,14 +313,16 @@ h1 span{
 .stat strong{
     display:block;
     font-size:28px;
+    font-weight:800;
+    color:#ff8528;
 }
 
 .stat span{
-    color:var(--muted);
-    font-size:13px;
+    color:#777b86;
+    font-size:12px;
 }
 
-/* SECTIONS */
+/* GENERAL */
 
 section{
     padding:100px 0;
@@ -364,30 +330,31 @@ section{
 
 .section-head{
     display:flex;
-    align-items:end;
     justify-content:space-between;
+    align-items:end;
     gap:30px;
-    margin-bottom:40px;
+    margin-bottom:42px;
 }
 
 .section-label{
-    color:var(--orange);
-    font-size:13px;
+    color:#ff8528;
+    font-size:12px;
     font-weight:800;
     text-transform:uppercase;
     letter-spacing:2px;
     margin-bottom:10px;
 }
 
-h2{
-    font-size:clamp(34px,4vw,53px);
+.section-title{
+    font-size:42px;
     line-height:1.05;
     letter-spacing:-2px;
 }
 
-.section-desc{
-    max-width:470px;
-    color:var(--muted);
+.section-description{
+    color:#858894;
+    max-width:440px;
+    font-size:14px;
 }
 
 /* SERVICES */
@@ -395,115 +362,927 @@ h2{
 .services{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:18px;
+    gap:16px;
 }
 
 .service{
-    position:relative;
-    padding:30px;
-    min-height:235px;
-    background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.018));
-    border:1px solid var(--border);
+    padding:32px;
+    background:#111319;
+    border:1px solid rgba(255,255,255,.08);
     border-radius:20px;
-    overflow:hidden;
-    transition:.25s;
+    transition:.3s;
 }
 
 .service:hover{
     transform:translateY(-5px);
-    border-color:rgba(255,133,40,.35);
+    border-color:rgba(255,133,40,.3);
 }
 
 .service-number{
-    color:rgba(255,255,255,.18);
-    font-size:42px;
+    color:#ff8528;
+    font-size:12px;
     font-weight:800;
 }
 
 .service h3{
     font-size:23px;
-    margin-top:15px;
+    margin:35px 0 10px;
 }
 
 .service p{
-    color:var(--muted);
+    color:#858894;
     font-size:14px;
-    max-width:480px;
-    margin-top:8px;
 }
 
-.price{
-    position:absolute;
-    right:25px;
-    bottom:25px;
-    color:var(--orange2);
-    font-size:19px;
+.service-price{
+    margin-top:25px;
+    font-size:18px;
     font-weight:800;
 }
 
 /* PORTFOLIO */
 
 .portfolio{
+    background:#0d0f13;
+}
+
+.projects{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:18px;
 }
 
 .project{
-    background:var(--panel);
-    border:1px solid var(--border);
+    background:#111319;
+    border:1px solid rgba(255,255,255,.08);
     border-radius:20px;
     overflow:hidden;
-    transition:.25s;
+    transition:.3s;
 }
 
 .project:hover{
     transform:translateY(-6px);
-    border-color:rgba(255,133,40,.35);
-}
-
-.project-preview{
-    height:220px;
-    padding:14px;
-    background:#0b0c10;
-}
-
-.project-browser{
-    height:100%;
-    border-radius:12px;
-    overflow:hidden;
-    border:1px solid rgba(255,255,255,.1);
-    background:#16181e;
-}
-
-.project-bar{
-    height:25px;
-    background:#0f1014;
-    display:flex;
-    align-items:center;
-    gap:4px;
-    padding-left:9px;
-}
-
-.project-bar i{
-    width:5px;
-    height:5px;
-    border-radius:50%;
-    background:#555;
+    border-color:rgba(255,133,40,.3);
 }
 
 .project-page{
-    padding:17px;
-    height:calc(100% - 25px);
+    height:245px;
+    padding:24px;
+    position:relative;
+    overflow:hidden;
+}
+
+.project-page:after{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    right:-70px;
+    top:-70px;
+    background:rgba(255,255,255,.08);
 }
 
 .barber .project-page{
-    background:linear-gradient(145deg,#151515,#242424);
+    background:linear-gradient(145deg,#151515,#3a2420);
 }
 
 .bike .project-page{
-    background:linear-gradient(145deg,#101820,#162b35);
+    background:linear-gradient(145deg,#0e1820,#172e3d);
 }
 
 .tech .project-page{
-    background
+    background:linear-gradient(145deg,#101016,#21152d);
+}
+
+.project-logo{
+    font-size:13px;
+    font-weight:800;
+    position:relative;
+    z-index:2;
+}
+
+.project-big{
+    position:absolute;
+    left:24px;
+    bottom:32px;
+    font-size:30px;
+    line-height:1;
+    font-weight:800;
+    max-width:240px;
+    z-index:2;
+}
+
+.project-info{
+    padding:20px;
+}
+
+.project-info h3{
+    font-size:18px;
+}
+
+.project-info p{
+    color:#777b86;
+    font-size:13px;
+    margin-top:5px;
+}
+
+.project-link{
+    display:inline-block;
+    color:#ff8528;
+    font-size:13px;
+    font-weight:800;
+    margin-top:16px;
+}
+
+/* ADVANTAGES */
+
+.advantages{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+}
+
+.advantage{
+    padding:28px;
+    background:#111319;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:18px;
+}
+
+.advantage-icon{
+    width:42px;
+    height:42px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:12px;
+    background:rgba(255,133,40,.1);
+    color:#ff8528;
+    font-weight:800;
+    margin-bottom:22px;
+}
+
+.advantage h3{
+    font-size:18px;
+    margin-bottom:8px;
+}
+
+.advantage p{
+    color:#858894;
+    font-size:13px;
+}
+
+/* PROCESS */
+
+.process{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.step{
+    padding:25px;
+    border-top:1px solid rgba(255,133,40,.4);
+}
+
+.step-number{
+    font-size:12px;
+    color:#ff8528;
+    font-weight:800;
+}
+
+.step h3{
+    margin:20px 0 8px;
+    font-size:17px;
+}
+
+.step p{
+    color:#858894;
+    font-size:13px;
+}
+
+/* CTA */
+
+.cta{
+    padding:70px;
+    border:1px solid rgba(255,133,40,.2);
+    border-radius:25px;
+    background:
+        radial-gradient(circle at 90% 10%,rgba(255,133,40,.18),transparent 30%),
+        #111319;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:clamp(32px,5vw,55px);
+    letter-spacing:-2px;
+    line-height:1.05;
+}
+
+.cta p{
+    max-width:600px;
+    margin:18px auto 28px;
+    color:#858894;
+    font-size:14px;
+}
+
+.cta-buttons{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+/* FOOTER */
+
+footer{
+    padding:35px 0;
+    border-top:1px solid rgba(255,255,255,.07);
+    color:#696c76;
+    font-size:12px;
+}
+
+.footer-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.footer-logo{
+    color:#fff;
+    font-size:17px;
+    font-weight:800;
+}
+
+.footer-logo span{
+    color:#ff8528;
+}
+
+.footer-links{
+    display:flex;
+    gap:18px;
+}
+
+.footer-links a:hover{
+    color:#fff;
+}
+
+/* HELPER */
+
+.helper-button{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    border:0;
+    background:#ff8528;
+    color:#111;
+    font-size:22px;
+    font-weight:800;
+    cursor:pointer;
+    box-shadow:0 10px 30px rgba(255,133,40,.25);
+    z-index:200;
+    transition:.25s;
+}
+
+.helper-button:hover{
+    transform:scale(1.06);
+}
+
+.helper{
+    position:fixed;
+    right:22px;
+    bottom:90px;
+    width:320px;
+    max-width:calc(100vw - 44px);
+    background:#111319;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:18px;
+    padding:20px;
+    z-index:200;
+    box-shadow:0 20px 60px rgba(0,0,0,.5);
+    display:none;
+}
+
+.helper.active{
+    display:block;
+}
+
+.helper h3{
+    font-size:17px;
+    margin-bottom:7px;
+}
+
+.helper p{
+    color:#858894;
+    font-size:12px;
+    margin-bottom:16px;
+}
+
+.helper-options{
+    display:grid;
+    gap:8px;
+}
+
+.helper-options button{
+    padding:11px;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:10px;
+    background:#171a22;
+    color:#fff;
+    cursor:pointer;
+    text-align:left;
+    font-size:12px;
+}
+
+.helper-options button:hover{
+    border-color:#ff8528;
+}
+
+.helper-result{
+    display:none;
+    margin-top:15px;
+    padding:14px;
+    border-radius:12px;
+    background:rgba(255,133,40,.08);
+    border:1px solid rgba(255,133,40,.15);
+    color:#ddd;
+    font-size:12px;
+}
+
+.helper-result.show{
+    display:block;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+    .hero{
+        grid-template-columns:1fr;
+        padding-top:60px;
+    }
+
+    .hero h1{
+        letter-spacing:-2px;
+    }
+
+    .browser{
+        max-width:650px;
+        width:100%;
+        margin:auto;
+    }
+
+    .projects{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .advantages{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .process{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:650px){
+    .container{
+        width:min(100% - 28px,1160px);
+    }
+
+    .nav{
+        height:68px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .nav-button{
+        padding:9px 13px;
+        font-size:12px;
+    }
+
+    .hero{
+        min-height:auto;
+        padding:55px 0 65px;
+        gap:45px;
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .hero-text{
+        font-size:15px;
+    }
+
+    .browser-content{
+        min-height:300px;
+    }
+
+    .mock-title{
+        font-size:27px;
+        margin-top:42px;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .stat{
+        padding:22px 10px;
+    }
+
+    .stat:nth-child(2){
+        border-right:0;
+    }
+
+    .stat:nth-child(-n+2){
+        border-bottom:1px solid rgba(255,255,255,.07);
+    }
+
+    section{
+        padding:70px 0;
+    }
+
+    .section-head{
+        display:block;
+    }
+
+    .section-title{
+        font-size:34px;
+        margin-bottom:15px;
+    }
+
+    .services,
+    .projects,
+    .advantages,
+    .process{
+        grid-template-columns:1fr;
+    }
+
+    .service{
+        padding:25px;
+    }
+
+    .project-page{
+        height:220px;
+    }
+
+    .cta{
+        padding:45px 22px;
+    }
+
+    .cta h2{
+        font-size:35px;
+    }
+
+    .footer-inner{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container nav">
+        <a href="#" class="logo">WEB<span>CRAFT</span></a>
+
+        <nav class="nav-links">
+            <a href="#services">Услуги</a>
+            <a href="#portfolio">Работы</a>
+            <a href="#process">Как работаем</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+
+        <a class="nav-button" href="#contacts">Заказать сайт</a>
+    </div>
+</header>
+
+<main>
+
+<section class="hero">
+    <div class="container" style="display:contents;">
+        <div>
+            <div class="badge">
+                <span class="badge-dot"></span>
+                Создание сайтов
+            </div>
+
+            <h1>
+                Ваш бизнес.<br>
+                Ваш стиль.<br>
+                <span>Ваш сайт.</span>
+            </h1>
+
+            <p class="hero-text">
+                Создаём современные сайты для бизнеса, услуг и личных проектов.
+                Красивый дизайн, адаптация под телефон и понятная структура.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#contacts" class="btn btn-primary">Обсудить проект</a>
+                <a href="#portfolio" class="btn btn-secondary">Посмотреть работы</a>
+            </div>
+        </div>
+
+        <div class="browser">
+            <div class="browser-top">
+                <span class="browser-dot"></span>
+                <span class="browser-dot"></span>
+                <span class="browser-dot"></span>
+                <div class="browser-url">webcraft-site.ru</div>
+            </div>
+
+            <div class="browser-content">
+                <div class="mock-logo">WEBCRAFT</div>
+
+                <div class="mock-title">
+                    Сайт, который<br>
+                    <span>выглядит дорого.</span>
+                </div>
+
+                <div class="mock-line"></div>
+                <div class="mock-button">ОБСУДИТЬ ПРОЕКТ</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="stats">
+    <div class="container stats-grid">
+        <div class="stat">
+            <strong>1000 ₽</strong>
+            <span>стартовая цена</span>
+        </div>
+
+        <div class="stat">
+            <strong>1–7</strong>
+            <span>дней на проект</span>
+        </div>
+
+        <div class="stat">
+            <strong>100%</strong>
+            <span>адаптация под телефон</span>
+        </div>
+
+        <div class="stat">
+            <strong>24/7</strong>
+            <span>связь по проекту</span>
+        </div>
+    </div>
+</section>
+
+<section id="services">
+    <div class="container">
+        <div class="section-head">
+            <div>
+                <div class="section-label">Услуги</div>
+                <h2 class="section-title">Сайт под вашу задачу</h2>
+            </div>
+
+            <p class="section-description">
+                Подберём подходящий формат сайта и соберём его под ваш бизнес или проект.
+            </p>
+        </div>
+
+        <div class="services">
+
+            <div class="service">
+                <div class="service-number">01 / СТАРТ</div>
+                <h3>Сайт-визитка</h3>
+                <p>
+                    Короткий и понятный сайт с информацией о вас,
+                    услугах, контактах и кнопками связи.
+                </p>
+                <div class="service-price">от 1 000 ₽</div>
+            </div>
+
+            <div class="service">
+                <div class="service-number">02 / ПРОДАЖИ</div>
+                <h3>Лендинг</h3>
+                <p>
+                    Одностраничный сайт с акцентом на услугу,
+                    преимущества и заявки от клиентов.
+                </p>
+                <div class="service-price">от 2 000 ₽</div>
+            </div>
+
+            <div class="service">
+                <div class="service-number">03 / БИЗНЕС</div>
+                <h3>Многостраничный сайт</h3>
+                <p>
+                    Несколько страниц для компаний, сервисов,
+                    портфолио и более крупных проектов.
+                </p>
+                <div class="service-price">от 3 000 ₽</div>
+            </div>
+
+            <div class="service">
+                <div class="service-number">04 / МАГАЗИН</div>
+                <h3>Интернет-магазин</h3>
+                <p>
+                    Каталог товаров, карточки, категории и
+                    необходимая структура магазина.
+                </p>
+                <div class="service-price">от 4 000 ₽</div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="portfolio" id="portfolio">
+    <div class="container">
+
+        <div class="section-head">
+            <div>
+                <div class="section-label">Портфолио</div>
+                <h2 class="section-title">Примеры работ</h2>
+            </div>
+
+            <p class="section-description">
+                Несколько демонстрационных проектов WEBCRAFT.
+            </p>
+        </div>
+
+        <div class="projects">
+
+            <div class="project">
+                <div class="project-page barber">
+                    <div class="project-logo">BLACK BARBER</div>
+                    <div class="project-big">STYLE<br>YOUR LOOK</div>
+                </div>
+
+                <div class="project-info">
+                    <h3>BLACK BARBER</h3>
+                    <p>Сайт для барбершопа</p>
+                    <a href="BLACK_BARBER.html" class="project-link">Открыть сайт →</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-page bike">
+                    <div class="project-logo">BIKE SERVICE</div>
+                    <div class="project-big">BIKE<br>REPAIR</div>
+                </div>
+
+                <div class="project-info">
+                    <h3>BIKE SERVICE</h3>
+                    <p>Сайт для велосервиса</p>
+                    <a href="BIKE_SERVICE.html" class="project-link">Открыть сайт →</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-page tech">
+                    <div class="project-logo">TECH STORE</div>
+                    <div class="project-big">NEXT<br>TECH</div>
+                </div>
+
+                <div class="project-info">
+                    <h3>TECH STORE</h3>
+                    <p>Сайт магазина техники</p>
+                    <a href="TECH_STORE.html" class="project-link">Открыть сайт →</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+
+        <div class="section-head">
+            <div>
+                <div class="section-label">Почему WEBCRAFT</div>
+                <h2 class="section-title">Без лишнего</h2>
+            </div>
+
+            <p class="section-description">
+                Делаем понятные сайты, которыми удобно пользоваться и с телефона, и с компьютера.
+            </p>
+        </div>
+
+        <div class="advantages">
+
+            <div class="advantage">
+                <div class="advantage-icon">01</div>
+                <h3>Современный дизайн</h3>
+                <p>
+                    Аккуратный визуал, современная типографика
+                    и структура без перегруза.
+                </p>
+            </div>
+
+            <div class="advantage">
+                <div class="advantage-icon">02</div>
+                <h3>Адаптивность</h3>
+                <p>
+                    Сайт подстраивается под смартфоны,
+                    планшеты и компьютеры.
+                </p>
+            </div>
+
+            <div class="advantage">
+                <div class="advantage-icon">03</div>
+                <h3>Понятный процесс</h3>
+                <p>
+                    Согласовываем задачу, дизайн и результат
+                    без сложной технической информации.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="process">
+    <div class="container">
+
+        <div class="section-head">
+            <div>
+                <div class="section-label">Процесс</div>
+                <h2 class="section-title">Как всё проходит</h2>
+            </div>
+        </div>
+
+        <div class="process">
+
+            <div class="step">
+                <div class="step-number">01</div>
+                <h3>Заявка</h3>
+                <p>Вы рассказываете, какой сайт вам нужен.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">02</div>
+                <h3>Обсуждение</h3>
+                <p>Определяем структуру, стиль и необходимые блоки.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">03</div>
+                <h3>Создание</h3>
+                <p>Собираем дизайн и программируем сайт.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">04</div>
+                <h3>Готово</h3>
+                <p>Проверяем сайт и передаём готовый результат.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="contacts">
+    <div class="container">
+
+        <div class="cta">
+            <h2>Есть идея для сайта?</h2>
+
+            <p>
+                Напишите нам — обсудим вашу задачу,
+                подберём формат и примерно оценим стоимость проекта.
+            </p>
+
+            <div class="cta-buttons">
+                <a
+                    href="https://vk.ru/ilia_climber"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-primary"
+                >
+                    Написать в VK
+                </a>
+
+                <a
+                    href="mailto:cigarevila06@gmail.com"
+                    class="btn btn-secondary"
+                >
+                    Написать на Email
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="container footer-inner">
+
+        <div class="footer-logo">
+            WEB<span>CRAFT</span>
+        </div>
+
+        <div>
+            © 2026 WEBCRAFT
+        </div>
+
+        <div class="footer-links">
+            <a href="https://vk.ru/ilia_climber" target="_blank" rel="noopener noreferrer">VK</a>
+            <a href="mailto:cigarevila06@gmail.com">Email</a>
+        </div>
+
+    </div>
+</footer>
+
+<!-- HELPER -->
+
+<button class="helper-button" onclick="toggleHelper()" aria-label="Помощник">
+    ?
+</button>
+
+<div class="helper" id="helper">
+
+    <h3>Помощник WEBCRAFT</h3>
+
+    <p>
+        Ответьте на несколько вопросов — я подскажу,
+        какой формат сайта может вам подойти.
+    </p>
+
+    <div class="helper-options" id="helperOptions">
+
+        <button onclick="chooseType('business')">
+            Мне нужен сайт для бизнеса
+        </button>
+
+        <button onclick="chooseType('landing')">
+            Хочу рекламировать одну услугу
+        </button>
+
+        <button onclick="chooseType('portfolio')">
+            Хочу показать свои работы
+        </button>
+
+        <button onclick="chooseType('shop')">
+            Мне нужен каталог товаров
+        </button>
+
+    </div>
+
+    <div class="helper-result" id="helperResult"></div>
+
+</div>
+
+<script>
+function toggleHelper(){
+    const helper = document.getElementById("helper");
+    helper.classList.toggle("active");
+}
+
+function chooseType(type){
+
+    const result = document.getElementById("helperResult");
+
+    let text = "";
+
+    if(type === "business"){
+        text =
+            "<strong>Вам может подойти сайт-визитка.</strong><br><br>" +
+            "Он содержит информацию о компании, услугах, преимуществах и контактах.<br><br>" +
+            "Стоимость — от 1 000 ₽.";
+    }
+
+    if(type === "landing"){
+        text =
+            "<strong>Вам может подойти лендинг.</strong><br><br>" +
+            "Он подходит для продвижения конкретной услуги или предложения.<br><br>" +
+            "Стоимость — от 2 000 ₽.";
+    }
+
+    if(type === "portfolio"){
+        text =
+            "<strong>Вам может подойти сайт-портфолио.</strong><br><br>" +
+            "Можно показать проекты, работы, информацию о себе и контакты.<br><br>" +
+            "Стоимость — от 1 000 ₽.";
+    }
+
+    if(type === "shop"){
+        text =
+            "<strong>Вам может подойти сайт с каталогом товаров.</strong><br><br>" +
+            "Формат и стоимость зависят от количества товаров и нужных функций.<br><br>" +
+            "Стоимость — от 4 000 ₽.";
+    }
+
+    result.innerHTML = text;
+    result.classList.add("show");
+}
+</script>
+
+</body>
+</html>
