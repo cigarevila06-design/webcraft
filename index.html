@@ -88,7 +88,7 @@ header{
 }
 
 .nav-links a{
-    color:#aeb0b9;
+    color:#c4c6ce;
     font-size:14px;
     transition:.25s;
 }
@@ -130,7 +130,7 @@ header{
     padding:8px 12px;
     border:1px solid rgba(255,133,40,.25);
     background:rgba(255,133,40,.08);
-    color:#ffad58;
+    color:#ffb36a;
     border-radius:999px;
     font-size:12px;
     font-weight:700;
@@ -157,7 +157,7 @@ header{
 }
 
 .hero-text{
-    color:#9b9da7;
+    color:#b4b6bf;
     font-size:17px;
     max-width:570px;
     margin:25px 0 32px;
@@ -201,7 +201,7 @@ header{
     transform:translateY(-3px);
 }
 
-/* BROWSER MOCKUP */
+/* BROWSER */
 
 .browser{
     position:relative;
@@ -227,7 +227,7 @@ header{
     width:9px;
     height:9px;
     border-radius:50%;
-    background:#373a43;
+    background:#555861;
 }
 
 .browser-url{
@@ -236,7 +236,7 @@ header{
     height:23px;
     border-radius:7px;
     background:#0c0d10;
-    color:#626570;
+    color:#858894;
     font-size:9px;
     display:flex;
     align-items:center;
@@ -271,7 +271,7 @@ header{
 .mock-line{
     width:210px;
     height:8px;
-    background:rgba(255,255,255,.1);
+    background:rgba(255,255,255,.14);
     border-radius:10px;
     margin-top:20px;
 }
@@ -318,7 +318,7 @@ header{
 }
 
 .stat span{
-    color:#777b86;
+    color:#a5a7b0;
     font-size:12px;
 }
 
@@ -337,7 +337,7 @@ section{
 }
 
 .section-label{
-    color:#ff8528;
+    color:#ff9b4b;
     font-size:12px;
     font-weight:800;
     text-transform:uppercase;
@@ -352,7 +352,7 @@ section{
 }
 
 .section-description{
-    color:#858894;
+    color:#a5a7b0;
     max-width:440px;
     font-size:14px;
 }
@@ -379,7 +379,7 @@ section{
 }
 
 .service-number{
-    color:#ff8528;
+    color:#ff9b4b;
     font-size:12px;
     font-weight:800;
 }
@@ -390,7 +390,7 @@ section{
 }
 
 .service p{
-    color:#858894;
+    color:#a5a7b0;
     font-size:14px;
 }
 
@@ -482,14 +482,14 @@ section{
 }
 
 .project-info p{
-    color:#777b86;
+    color:#a5a7b0;
     font-size:13px;
     margin-top:5px;
 }
 
 .project-link{
     display:inline-block;
-    color:#ff8528;
+    color:#ff9b4b;
     font-size:13px;
     font-weight:800;
     margin-top:16px;
@@ -518,7 +518,7 @@ section{
     justify-content:center;
     border-radius:12px;
     background:rgba(255,133,40,.1);
-    color:#ff8528;
+    color:#ff9b4b;
     font-weight:800;
     margin-bottom:22px;
 }
@@ -529,7 +529,7 @@ section{
 }
 
 .advantage p{
-    color:#858894;
+    color:#a5a7b0;
     font-size:13px;
 }
 
@@ -548,7 +548,7 @@ section{
 
 .step-number{
     font-size:12px;
-    color:#ff8528;
+    color:#ff9b4b;
     font-weight:800;
 }
 
@@ -558,7 +558,7 @@ section{
 }
 
 .step p{
-    color:#858894;
+    color:#a5a7b0;
     font-size:13px;
 }
 
@@ -583,7 +583,7 @@ section{
 .cta p{
     max-width:600px;
     margin:18px auto 28px;
-    color:#858894;
+    color:#a5a7b0;
     font-size:14px;
 }
 
@@ -599,7 +599,7 @@ section{
 footer{
     padding:35px 0;
     border-top:1px solid rgba(255,255,255,.07);
-    color:#696c76;
+    color:#9b9da7;
     font-size:12px;
 }
 
@@ -678,7 +678,7 @@ footer{
 }
 
 .helper p{
-    color:#858894;
+    color:#a5a7b0;
     font-size:12px;
     margin-bottom:16px;
 }
@@ -721,6 +721,7 @@ footer{
 /* MOBILE */
 
 @media(max-width:900px){
+
     .hero{
         grid-template-columns:1fr;
         padding-top:60px;
@@ -750,6 +751,7 @@ footer{
 }
 
 @media(max-width:650px){
+
     .container{
         width:min(100% - 28px,1160px);
     }
@@ -854,7 +856,10 @@ footer{
 
 <header>
     <div class="container nav">
-        <a href="#" class="logo">WEB<span>CRAFT</span></a>
+
+        <a href="#" class="logo">
+            WEB<span>CRAFT</span>
+        </a>
 
         <nav class="nav-links">
             <a href="#services">Услуги</a>
@@ -863,15 +868,21 @@ footer{
             <a href="#contacts">Контакты</a>
         </nav>
 
-        <a class="nav-button" href="#contacts">Заказать сайт</a>
+        <a class="nav-button" href="#contacts">
+            Заказать сайт
+        </a>
+
     </div>
 </header>
 
 <main>
 
 <section class="hero">
+
     <div class="container" style="display:contents;">
+
         <div>
+
             <div class="badge">
                 <span class="badge-dot"></span>
                 Создание сайтов
@@ -889,21 +900,36 @@ footer{
             </p>
 
             <div class="hero-buttons">
-                <a href="#contacts" class="btn btn-primary">Обсудить проект</a>
-                <a href="#portfolio" class="btn btn-secondary">Посмотреть работы</a>
+
+                <a href="#contacts" class="btn btn-primary">
+                    Обсудить проект
+                </a>
+
+                <a href="#portfolio" class="btn btn-secondary">
+                    Посмотреть работы
+                </a>
+
             </div>
+
         </div>
 
         <div class="browser">
+
             <div class="browser-top">
                 <span class="browser-dot"></span>
                 <span class="browser-dot"></span>
                 <span class="browser-dot"></span>
-                <div class="browser-url">webcraft-site.ru</div>
+
+                <div class="browser-url">
+                    webcraft-site.ru
+                </div>
             </div>
 
             <div class="browser-content">
-                <div class="mock-logo">WEBCRAFT</div>
+
+                <div class="mock-logo">
+                    WEBCRAFT
+                </div>
 
                 <div class="mock-title">
                     Сайт, который<br>
@@ -911,14 +937,23 @@ footer{
                 </div>
 
                 <div class="mock-line"></div>
-                <div class="mock-button">ОБСУДИТЬ ПРОЕКТ</div>
+
+                <div class="mock-button">
+                    ОБСУДИТЬ ПРОЕКТ
+                </div>
+
             </div>
+
         </div>
+
     </div>
+
 </section>
 
 <section class="stats">
+
     <div class="container stats-grid">
+
         <div class="stat">
             <strong>1000 ₽</strong>
             <span>стартовая цена</span>
@@ -938,219 +973,431 @@ footer{
             <strong>24/7</strong>
             <span>связь по проекту</span>
         </div>
+
     </div>
+
 </section>
 
 <section id="services">
+
     <div class="container">
+
         <div class="section-head">
+
             <div>
-                <div class="section-label">Услуги</div>
-                <h2 class="section-title">Сайт под вашу задачу</h2>
+                <div class="section-label">
+                    Услуги
+                </div>
+
+                <h2 class="section-title">
+                    Сайт под вашу задачу
+                </h2>
             </div>
 
             <p class="section-description">
                 Подберём подходящий формат сайта и соберём его под ваш бизнес или проект.
             </p>
+
         </div>
 
         <div class="services">
 
             <div class="service">
-                <div class="service-number">01 / СТАРТ</div>
-                <h3>Сайт-визитка</h3>
+
+                <div class="service-number">
+                    01 / СТАРТ
+                </div>
+
+                <h3>
+                    Сайт-визитка
+                </h3>
+
                 <p>
                     Короткий и понятный сайт с информацией о вас,
                     услугах, контактах и кнопками связи.
                 </p>
-                <div class="service-price">от 1 000 ₽</div>
+
+                <div class="service-price">
+                    от 1 000 ₽
+                </div>
+
             </div>
 
             <div class="service">
-                <div class="service-number">02 / ПРОДАЖИ</div>
-                <h3>Лендинг</h3>
+
+                <div class="service-number">
+                    02 / ПРОДАЖИ
+                </div>
+
+                <h3>
+                    Лендинг
+                </h3>
+
                 <p>
                     Одностраничный сайт с акцентом на услугу,
                     преимущества и заявки от клиентов.
                 </p>
-                <div class="service-price">от 2 000 ₽</div>
+
+                <div class="service-price">
+                    от 2 000 ₽
+                </div>
+
             </div>
 
             <div class="service">
-                <div class="service-number">03 / БИЗНЕС</div>
-                <h3>Многостраничный сайт</h3>
+
+                <div class="service-number">
+                    03 / БИЗНЕС
+                </div>
+
+                <h3>
+                    Многостраничный сайт
+                </h3>
+
                 <p>
                     Несколько страниц для компаний, сервисов,
                     портфолио и более крупных проектов.
                 </p>
-                <div class="service-price">от 3 000 ₽</div>
+
+                <div class="service-price">
+                    от 3 000 ₽
+                </div>
+
             </div>
 
             <div class="service">
-                <div class="service-number">04 / МАГАЗИН</div>
-                <h3>Интернет-магазин</h3>
+
+                <div class="service-number">
+                    04 / МАГАЗИН
+                </div>
+
+                <h3>
+                    Интернет-магазин
+                </h3>
+
                 <p>
                     Каталог товаров, карточки, категории и
                     необходимая структура магазина.
                 </p>
-                <div class="service-price">от 4 000 ₽</div>
+
+                <div class="service-price">
+                    от 4 000 ₽
+                </div>
+
             </div>
 
         </div>
+
     </div>
+
 </section>
 
 <section class="portfolio" id="portfolio">
+
     <div class="container">
 
         <div class="section-head">
+
             <div>
-                <div class="section-label">Портфолио</div>
-                <h2 class="section-title">Примеры работ</h2>
+                <div class="section-label">
+                    Портфолио
+                </div>
+
+                <h2 class="section-title">
+                    Примеры работ
+                </h2>
             </div>
 
             <p class="section-description">
                 Несколько демонстрационных проектов WEBCRAFT.
             </p>
+
         </div>
 
         <div class="projects">
 
             <div class="project">
+
                 <div class="project-page barber">
-                    <div class="project-logo">BLACK BARBER</div>
-                    <div class="project-big">STYLE<br>YOUR LOOK</div>
+
+                    <div class="project-logo">
+                        BLACK BARBER
+                    </div>
+
+                    <div class="project-big">
+                        STYLE<br>YOUR LOOK
+                    </div>
+
                 </div>
 
                 <div class="project-info">
-                    <h3>BLACK BARBER</h3>
-                    <p>Сайт для барбершопа</p>
-                    <a href="BLACK_BARBER.html" class="project-link">Открыть сайт →</a>
+
+                    <h3>
+                        BLACK BARBER
+                    </h3>
+
+                    <p>
+                        Сайт для барбершопа
+                    </p>
+
+                    <a href="BLACK_BARBER.html" class="project-link">
+                        Открыть сайт →
+                    </a>
+
                 </div>
+
             </div>
 
             <div class="project">
+
                 <div class="project-page bike">
-                    <div class="project-logo">BIKE SERVICE</div>
-                    <div class="project-big">BIKE<br>REPAIR</div>
+
+                    <div class="project-logo">
+                        BIKE SERVICE
+                    </div>
+
+                    <div class="project-big">
+                        BIKE<br>REPAIR
+                    </div>
+
                 </div>
 
                 <div class="project-info">
-                    <h3>BIKE SERVICE</h3>
-                    <p>Сайт для велосервиса</p>
-                    <a href="BIKE_SERVICE.html" class="project-link">Открыть сайт →</a>
+
+                    <h3>
+                        BIKE SERVICE
+                    </h3>
+
+                    <p>
+                        Сайт для велосервиса
+                    </p>
+
+                    <a href="BIKE_SERVICE.html" class="project-link">
+                        Открыть сайт →
+                    </a>
+
                 </div>
+
             </div>
 
             <div class="project">
+
                 <div class="project-page tech">
-                    <div class="project-logo">TECH STORE</div>
-                    <div class="project-big">NEXT<br>TECH</div>
+
+                    <div class="project-logo">
+                        TECH STORE
+                    </div>
+
+                    <div class="project-big">
+                        NEXT<br>TECH
+                    </div>
+
                 </div>
 
                 <div class="project-info">
-                    <h3>TECH STORE</h3>
-                    <p>Сайт магазина техники</p>
-                    <a href="TECH_STORE.html" class="project-link">Открыть сайт →</a>
+
+                    <h3>
+                        TECH STORE
+                    </h3>
+
+                    <p>
+                        Сайт магазина техники
+                    </p>
+
+                    <a href="TECH_STORE.html" class="project-link">
+                        Открыть сайт →
+                    </a>
+
                 </div>
+
             </div>
 
         </div>
+
     </div>
+
 </section>
 
 <section>
+
     <div class="container">
 
         <div class="section-head">
+
             <div>
-                <div class="section-label">Почему WEBCRAFT</div>
-                <h2 class="section-title">Без лишнего</h2>
+                <div class="section-label">
+                    Почему WEBCRAFT
+                </div>
+
+                <h2 class="section-title">
+                    Без лишнего
+                </h2>
             </div>
 
             <p class="section-description">
                 Делаем понятные сайты, которыми удобно пользоваться и с телефона, и с компьютера.
             </p>
+
         </div>
 
         <div class="advantages">
 
             <div class="advantage">
-                <div class="advantage-icon">01</div>
-                <h3>Современный дизайн</h3>
+
+                <div class="advantage-icon">
+                    01
+                </div>
+
+                <h3>
+                    Современный дизайн
+                </h3>
+
                 <p>
                     Аккуратный визуал, современная типографика
                     и структура без перегруза.
                 </p>
+
             </div>
 
             <div class="advantage">
-                <div class="advantage-icon">02</div>
-                <h3>Адаптивность</h3>
+
+                <div class="advantage-icon">
+                    02
+                </div>
+
+                <h3>
+                    Адаптивность
+                </h3>
+
                 <p>
                     Сайт подстраивается под смартфоны,
                     планшеты и компьютеры.
                 </p>
+
             </div>
 
             <div class="advantage">
-                <div class="advantage-icon">03</div>
-                <h3>Понятный процесс</h3>
+
+                <div class="advantage-icon">
+                    03
+                </div>
+
+                <h3>
+                    Понятный процесс
+                </h3>
+
                 <p>
                     Согласовываем задачу, дизайн и результат
                     без сложной технической информации.
                 </p>
+
             </div>
 
         </div>
+
     </div>
+
 </section>
 
 <section id="process">
+
     <div class="container">
 
         <div class="section-head">
+
             <div>
-                <div class="section-label">Процесс</div>
-                <h2 class="section-title">Как всё проходит</h2>
+                <div class="section-label">
+                    Процесс
+                </div>
+
+                <h2 class="section-title">
+                    Как всё проходит
+                </h2>
             </div>
+
         </div>
 
         <div class="process">
 
             <div class="step">
-                <div class="step-number">01</div>
-                <h3>Заявка</h3>
-                <p>Вы рассказываете, какой сайт вам нужен.</p>
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <h3>
+                    Заявка
+                </h3>
+
+                <p>
+                    Вы рассказываете, какой сайт вам нужен.
+                </p>
+
             </div>
 
             <div class="step">
-                <div class="step-number">02</div>
-                <h3>Обсуждение</h3>
-                <p>Определяем структуру, стиль и необходимые блоки.</p>
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <h3>
+                    Обсуждение
+                </h3>
+
+                <p>
+                    Определяем структуру, стиль и необходимые блоки.
+                </p>
+
             </div>
 
             <div class="step">
-                <div class="step-number">03</div>
-                <h3>Создание</h3>
-                <p>Собираем дизайн и программируем сайт.</p>
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <h3>
+                    Создание
+                </h3>
+
+                <p>
+                    Собираем дизайн и программируем сайт.
+                </p>
+
             </div>
 
             <div class="step">
-                <div class="step-number">04</div>
-                <h3>Готово</h3>
-                <p>Проверяем сайт и передаём готовый результат.</p>
+
+                <div class="step-number">
+                    04
+                </div>
+
+                <h3>
+                    Готово
+                </h3>
+
+                <p>
+                    Проверяем сайт и передаём готовый результат.
+                </p>
+
             </div>
 
         </div>
+
     </div>
+
 </section>
 
 <section id="contacts">
+
     <div class="container">
 
         <div class="cta">
-            <h2>Есть идея для сайта?</h2>
+
+            <h2>
+                Есть идея для сайта?
+            </h2>
 
             <p>
                 Напишите нам — обсудим вашу задачу,
@@ -1158,6 +1405,7 @@ footer{
             </p>
 
             <div class="cta-buttons">
+
                 <a
                     href="https://vk.ru/ilia_climber"
                     target="_blank"
@@ -1168,20 +1416,26 @@ footer{
                 </a>
 
                 <a
-                    href="mailto:cigarevila06@gmail.com"
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=cigarevila06@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     class="btn btn-secondary"
                 >
                     Написать на Email
                 </a>
+
             </div>
+
         </div>
 
     </div>
+
 </section>
 
 </main>
 
 <footer>
+
     <div class="container footer-inner">
 
         <div class="footer-logo">
@@ -1193,22 +1447,43 @@ footer{
         </div>
 
         <div class="footer-links">
-            <a href="https://vk.ru/ilia_climber" target="_blank" rel="noopener noreferrer">VK</a>
-            <a href="mailto:cigarevila06@gmail.com">Email</a>
+
+            <a
+                href="https://vk.ru/ilia_climber"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                VK
+            </a>
+
+            <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=cigarevila06@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Email
+            </a>
+
         </div>
 
     </div>
+
 </footer>
 
-<!-- HELPER -->
-
-<button class="helper-button" onclick="toggleHelper()" aria-label="Помощник">
+<button
+    class="helper-button"
+    onclick="toggleHelper()"
+    aria-label="Открыть помощника"
+    title="Открыть помощника"
+>
     ?
 </button>
 
 <div class="helper" id="helper">
 
-    <h3>Помощник WEBCRAFT</h3>
+    <h3>
+        Помощник WEBCRAFT
+    </h3>
 
     <p>
         Ответьте на несколько вопросов — я подскажу,
@@ -1240,9 +1515,13 @@ footer{
 </div>
 
 <script>
+
 function toggleHelper(){
+
     const helper = document.getElementById("helper");
+
     helper.classList.toggle("active");
+
 }
 
 function chooseType(type){
@@ -1252,36 +1531,47 @@ function chooseType(type){
     let text = "";
 
     if(type === "business"){
+
         text =
             "<strong>Вам может подойти сайт-визитка.</strong><br><br>" +
             "Он содержит информацию о компании, услугах, преимуществах и контактах.<br><br>" +
             "Стоимость — от 1 000 ₽.";
+
     }
 
     if(type === "landing"){
+
         text =
             "<strong>Вам может подойти лендинг.</strong><br><br>" +
             "Он подходит для продвижения конкретной услуги или предложения.<br><br>" +
             "Стоимость — от 2 000 ₽.";
+
     }
 
     if(type === "portfolio"){
+
         text =
             "<strong>Вам может подойти сайт-портфолио.</strong><br><br>" +
             "Можно показать проекты, работы, информацию о себе и контакты.<br><br>" +
             "Стоимость — от 1 000 ₽.";
+
     }
 
     if(type === "shop"){
+
         text =
             "<strong>Вам может подойти сайт с каталогом товаров.</strong><br><br>" +
             "Формат и стоимость зависят от количества товаров и нужных функций.<br><br>" +
             "Стоимость — от 4 000 ₽.";
+
     }
 
     result.innerHTML = text;
+
     result.classList.add("show");
+
 }
+
 </script>
 
 </body>
